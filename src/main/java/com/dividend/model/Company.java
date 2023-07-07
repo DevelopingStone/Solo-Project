@@ -1,4 +1,4 @@
-package com.dividend.web.domain.model;
+package com.dividend.web.model;
 
 import lombok.Builder;
 import lombok.Data;
