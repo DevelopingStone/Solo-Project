@@ -1,4 +1,4 @@
-package com.dividend.service.component;
+package com.dividend.service.component.nonScheduled;
 
 import com.dividend.exception.implementation.company.NoCompanyException;
 import com.dividend.model.domain.Company;
@@ -16,7 +16,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.dividend.service.component.scheduler.constant.CacheKey.KEY_FINANCE;
+import static com.dividend.service.component.nonScheduled.constant.CacheKey.DEFAULT_KEY;
+import static com.dividend.service.component.nonScheduled.constant.CacheKey.KEY_FINANCE;
 
 @Slf4j
 @Service
@@ -27,7 +28,7 @@ public class FinanceService {
     private final CompanyRepository companyRepository;
     private final DividendRepository dividendRepository;
 
-    @Cacheable(key = "#companyName", value = KEY_FINANCE)
+    @Cacheable(key = DEFAULT_KEY, value = KEY_FINANCE)
     public ScrapedResult getDividendByCompanyName(String companyName) {
 
         CompanyEntity company = companyRepository.findByName(companyName)
