@@ -1,5 +1,6 @@
-package com.dividend.service.component;
+package com.dividend.service.component.nonScheduled;
 
+import com.dividend.dto.AutoCompleteDto;
 import com.dividend.dto.CompanyDto;
 import com.dividend.exception.implementation.company.AlreadyExistTickerException;
 import com.dividend.exception.implementation.company.FailScrapCompanyException;
@@ -10,17 +11,21 @@ import com.dividend.model.vo.ScrapedResult;
 import com.dividend.persist.CompanyRepository;
 import com.dividend.persist.DividendRepository;
 import com.dividend.persist.entity.CompanyEntity;
-import com.dividend.persist.entity.DividendEntity;
+import com.dividend.service.component.scheduled.constant.CacheKey;
 import com.dividend.service.module.Scrapper;
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Page;
+import org.springframework.cache.CacheManager;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
+
+import static com.dividend.service.component.nonScheduled.constant.PageableConstant.NUMBER_OF_CONTENT_PER_PAGE;
+import static com.dividend.service.component.nonScheduled.constant.PageableConstant.NUMBER_OF_PAGE;
 
 @Service
 @AllArgsConstructor
@@ -33,6 +38,7 @@ public class CompanyService {
     private final Scrapper yahooFinanceScrapper;
     private final CompanyRepository companyRepository;
     private final DividendRepository dividendRepository;
+    private final CacheManager redisCacheManager;
 
     public CompanyDto save(String ticker) {
         if(ObjectUtils.isEmpty(ticker)){
@@ -60,27 +66,29 @@ public class CompanyService {
         ScrapedResult scrapedResult = this.yahooFinanceScrapper.scrapDividendByCompany(company);
         this.dividendRepository.saveAll(scrapedResult.toDividendEntities(companyEntity.getId()));
 
-        return CompanyDto.fromEntity(company);
+        return CompanyDto.fromDomainModel(company);
     }
 
-    public Page<CompanyEntity> getAllCompany(Pageable pageable) {
-        return this.companyRepository.findAll(pageable);
-    }
-
-    public List<String> getCompanyNamesByKeyword(String keyword) {
-        Pageable limit = PageRequest.of(0, 10);
-        List<CompanyEntity> companyEntities = this.companyRepository.findByNameStartingWithIgnoreCase(keyword, limit);
-        return companyEntities.stream()
-                .map(CompanyEntity::getName)
+    public List<CompanyDto> getAllCompany(Pageable pageable) {
+        return this.companyRepository.findAll(pageable).stream()
+                .map(CompanyDto::fromEntity)
                 .collect(Collectors.toList());
     }
 
-    public String deleteCompany(String ticker) {
-        CompanyEntity companyEntity = this.companyRepository.findByTicker(ticker)
+    public AutoCompleteDto getCompanyNamesByKeyword(String keyword) {
+        Pageable limit = PageRequest.of(NUMBER_OF_PAGE, NUMBER_OF_CONTENT_PER_PAGE);
+        return AutoCompleteDto.from(this.companyRepository.findByNameStartingWithIgnoreCase(keyword, limit));
+    }
+
+    public CompanyDto deleteCompany(String ticker) {
+        CompanyEntity companyEntity = this.companyRepository.findByTicker(ticker.trim())
                 .orElseThrow(NoCompanyException::new);
         this.dividendRepository.deleteAllByCompanyId(companyEntity.getId());
         this.companyRepository.delete(companyEntity);
-
-        return companyEntity.getName();
+        this.clearFinanceCache(companyEntity.getName());
+        return CompanyDto.fromDomainModel(new Company(companyEntity.getTicker(), companyEntity.getName()));
+    }
+    private void clearFinanceCache(String companyName) {
+        Objects.requireNonNull(this.redisCacheManager.getCache(CacheKey.KEY_FINANCE)).evict(companyName);
     }
 }
