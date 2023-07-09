@@ -1,4 +1,4 @@
-package com.dividend.service.component.scheduler;
+package com.dividend.service.component.scheduled;
 
 import com.dividend.model.domain.Company;
 import com.dividend.model.vo.ScrapedResult;
@@ -6,7 +6,7 @@ import com.dividend.persist.CompanyRepository;
 import com.dividend.persist.DividendRepository;
 import com.dividend.persist.entity.CompanyEntity;
 import com.dividend.persist.entity.DividendEntity;
-import com.dividend.service.component.scheduler.constant.CacheKey;
+import com.dividend.service.component.scheduled.constant.CacheKey;
 import com.dividend.service.module.Scrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,5 +1,6 @@
 package com.dividend.service.component;
 
+import com.dividend.dto.CompanyDto;
 import com.dividend.exception.implementation.company.AlreadyExistTickerException;
 import com.dividend.exception.implementation.company.FailScrapCompanyException;
 import com.dividend.exception.implementation.company.NoCompanyException;
@@ -33,7 +34,7 @@ public class CompanyService {
     private final CompanyRepository companyRepository;
     private final DividendRepository dividendRepository;
 
-    public Company save(String ticker) {
+    public CompanyDto save(String ticker) {
         if(ObjectUtils.isEmpty(ticker)){
             throw new TickerAbsentException();
         }
@@ -47,20 +48,19 @@ public class CompanyService {
         return this.storeCompanyAndDividend(ticker);
     }
 
-    private Company storeCompanyAndDividend(String ticker) {
+    private CompanyDto storeCompanyAndDividend(String ticker) {
         Company company = this.yahooFinanceScrapper.scrapCompanyByTicker(ticker);
         if (ObjectUtils.isEmpty(company)) {
             throw new FailScrapCompanyException(ticker);
         }
+
         CompanyEntity companyEntity = this.companyRepository.save(
                 new CompanyEntity(company));
 
         ScrapedResult scrapedResult = this.yahooFinanceScrapper.scrapDividendByCompany(company);
-        List<DividendEntity> dividendEntities = scrapedResult
-                                                .toDividendEntities(companyEntity.getId());
+        this.dividendRepository.saveAll(scrapedResult.toDividendEntities(companyEntity.getId()));
 
-        this.dividendRepository.saveAll(dividendEntities);
-        return company;
+        return CompanyDto.fromEntity(company);
     }
 
     public Page<CompanyEntity> getAllCompany(Pageable pageable) {

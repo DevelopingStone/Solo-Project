@@ -1,4 +1,4 @@
-package com.dividend.service.component.scheduler.constant;
+package com.dividend.service.component.scheduled.constant;
 
 public class CacheKey {
 
