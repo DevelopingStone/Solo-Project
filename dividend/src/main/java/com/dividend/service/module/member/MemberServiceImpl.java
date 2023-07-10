@@ -1,4 +1,4 @@
-package com.dividend.service.module;
+package com.dividend.service.module.member;
 
 import com.dividend.exception.implementation.member.AlreadyExistsUserException;
 import com.dividend.exception.implementation.member.NoUsernameException;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @AllArgsConstructor
-public class MemberService implements UserDetailsService {
+public class MemberServiceImpl implements UserDetailsService, MemberService{
 
     private final PasswordEncoder passwordEncoder;
     private final MemberRepository memberRepository;

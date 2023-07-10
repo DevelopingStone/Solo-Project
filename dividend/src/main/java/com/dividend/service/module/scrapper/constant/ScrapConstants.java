@@ -1,4 +1,4 @@
-package com.dividend.service.module.constant;
+package com.dividend.service.module.scrapper.constant;
 
 public final class ScrapConstants {
     public static final String REQUEST_URI = "https://finance.yahoo.com/quote/%s/history?period1=%d&period2=%d&interval=1mo";

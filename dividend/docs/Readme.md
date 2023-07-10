@@ -7,15 +7,15 @@
 
 ## API 명세
 
-1) GET - finance/dividend/{companyName}
+1) [X] GET - finance/dividend/{companyName}
 - 회사 이름을 인풋으로 받아서 해당 회사의 메타 정보와 배당금 정보를 반환
 - 잘못된 회사명이 입력으로 들어온 경우 400 status 코드와 에러메시지 반환
 
-2) GET - company/autocomplete
+2) [X] GET - company/autocomplete
 - 자동완성 기능을 위한 API
 - 검색하고자 하는 prefix 를 입력으로 받고, 해당 prefix 로 검색되는 회사명 리스트 중 10개 반환
 
-3) GET - company
+3) [X] GET - company
 - 서비스에서 관리하고 있는 모든 회사 목록을 반환
 - 반환 결과는 Page 인터페이스 형태
 

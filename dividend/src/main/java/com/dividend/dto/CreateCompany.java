@@ -1,5 +1,6 @@
 package com.dividend.dto;
 
+import com.dividend.model.domain.Company;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -32,10 +33,10 @@ public class CreateCompany {
         @NotNull
         private String name;
 
-        public static Response from(CompanyDto companyDto){
+        public static Response from(Company company){
             return Response.builder()
-                    .name(companyDto.getName())
-                    .ticker(companyDto.getTicker())
+                    .name(company.getName())
+                    .ticker(company.getTicker())
                     .build();
         }
 

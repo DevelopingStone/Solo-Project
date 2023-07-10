@@ -1,7 +1,7 @@
 package com.dividend.contoller;
 
-import com.dividend.model.vo.ScrapedResult;
-import com.dividend.service.component.FinanceService;
+import com.dividend.dto.ScrapedResultDto;
+import com.dividend.service.component.nonScheduled.FinanceService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,8 @@ public class DividendController {
 
     @GetMapping("/dividend/{companyName}")
     public ResponseEntity<?> searchFinance(@PathVariable String companyName) {
-        ScrapedResult scrapedResult = financeService.getDividendByCompanyName(companyName);
-        return ResponseEntity.ok(scrapedResult);
+        return ResponseEntity.ok(ScrapedResultDto.from(
+                financeService.getDividendByCompanyName(companyName)
+        ));
     }
 }

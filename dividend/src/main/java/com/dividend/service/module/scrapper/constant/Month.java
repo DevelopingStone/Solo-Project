@@ -1,4 +1,4 @@
-package com.dividend.service.module.constant;
+package com.dividend.service.module.scrapper.constant;
 
 public enum Month {
     JAN("Jan", 1),

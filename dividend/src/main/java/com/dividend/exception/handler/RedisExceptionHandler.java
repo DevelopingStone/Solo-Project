@@ -18,7 +18,7 @@ public class RedisExceptionHandler {
 
     @ExceptionHandler(RedisException.class)
     protected ResponseEntity<?> handleGlobalException(RedisException redisException){
-        log.info(redisException.getClass() + "is occurred!");
+        log.info(redisException.getClass() + " is occurred!");
         ErrorResponse errorResponse = ErrorResponse.builder()
                 .code(INTERNAL_SERVER_ERROR.value())
                 .message(redisException.getMessage())

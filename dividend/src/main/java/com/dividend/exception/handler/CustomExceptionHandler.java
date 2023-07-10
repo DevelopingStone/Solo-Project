@@ -16,6 +16,7 @@ public class CustomExceptionHandler {
 
     @ExceptionHandler(AbstractException.class)
     protected ResponseEntity<?> handleCustomException(AbstractException abstractException) {
+        log.info(abstractException.getClass() + " is occurred!");
         ErrorResponse errorResponse = ErrorResponse.builder()
                 .code(abstractException.getStatusCode())
                 .message(abstractException.getMessage())

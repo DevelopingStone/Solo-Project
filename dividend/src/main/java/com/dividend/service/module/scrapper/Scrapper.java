@@ -1,4 +1,4 @@
-package com.dividend.service.module;
+package com.dividend.service.module.scrapper;
 
 import com.dividend.model.domain.Company;
 import com.dividend.model.vo.ScrapedResult;

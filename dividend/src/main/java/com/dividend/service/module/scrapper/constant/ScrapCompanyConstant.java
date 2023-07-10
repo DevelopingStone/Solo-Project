@@ -1,4 +1,4 @@
-package com.dividend.service.module.constant;
+package com.dividend.service.module.scrapper.constant;
 
 public final class ScrapCompanyConstant {
     public static final String SUMMARY_URI = "https://finance.yahoo.com/quote/%s?p=%s";

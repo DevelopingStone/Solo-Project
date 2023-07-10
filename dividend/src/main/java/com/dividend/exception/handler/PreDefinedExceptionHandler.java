@@ -16,7 +16,7 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 public class PreDefinedExceptionHandler {
     @ExceptionHandler(Exception.class)
     protected ResponseEntity<?> handleGlobalException(Exception exception){
-        log.info(exception.getClass() + "is occurred!");
+        log.info(exception.getClass() + " is occurred!");
         ErrorResponse errorResponse = ErrorResponse.builder()
                 .code(INTERNAL_SERVER_ERROR.value())
                 .message(exception.getMessage())

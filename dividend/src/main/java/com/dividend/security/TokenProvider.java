@@ -1,6 +1,6 @@
 package com.dividend.security;
 
-import com.dividend.service.module.MemberService;
+import com.dividend.service.module.member.MemberServiceImpl;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
@@ -22,7 +22,7 @@ public class TokenProvider {
     private static final long TOKEN_EXPIRE_TIME = 1000 * 60 * 60;
     private static final String KEY_ROLES = "roles";
 
-    private final MemberService memberService;
+    private final MemberServiceImpl memberServiceImpl;
 
     @Value("{spring.jwt.secret")
     private String secretKey;
@@ -49,7 +49,7 @@ public class TokenProvider {
     }
 
     public Authentication getAuthentication(String jwt) {
-        UserDetails userDetails = this.memberService.loadUserByUsername(this.getUsername(jwt));
+        UserDetails userDetails = this.memberServiceImpl.loadUserByUsername(this.getUsername(jwt));
         return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
 

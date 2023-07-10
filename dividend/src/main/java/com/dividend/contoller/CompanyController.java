@@ -1,19 +1,14 @@
 package com.dividend.contoller;
 
+import com.dividend.dto.AutoComplete;
 import com.dividend.dto.CreateCompany;
-import com.dividend.model.domain.Company;
-import com.dividend.persist.entity.CompanyEntity;
-import com.dividend.service.component.CompanyService;
-import com.dividend.service.component.scheduler.constant.CacheKey;
+import com.dividend.dto.DeleteCompany;
+import com.dividend.model.vo.ScrapedResult;
+import com.dividend.service.component.nonScheduled.CompanyService;
 import lombok.AllArgsConstructor;
-import org.springframework.cache.CacheManager;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Objects;
 
 @RestController
 @RequestMapping("/company")
@@ -21,36 +16,32 @@ import java.util.Objects;
 public class CompanyController {
 
     private final CompanyService companyService;
-    private final CacheManager redisCacheManager;
 
     @GetMapping("/autocomplete")
     public ResponseEntity<?> autocomplete(@RequestParam String keyword) {
-        List<String> autocomplete = this.companyService.getCompanyNamesByKeyword(keyword);
-        return ResponseEntity.ok(autocomplete);
+        return ResponseEntity.ok(AutoComplete.Response.from(
+                this.companyService.recommendCompanyName(keyword)));
     }
 
     @GetMapping("/search")
     public ResponseEntity<?> searchCompany(final Pageable pageable) {
-        Page<CompanyEntity> companies = companyService.getAllCompany(pageable);
-        return ResponseEntity.ok(companies);
+
+        return ResponseEntity.ok(companyService.getAllCompany(pageable));
     }
 
     @PostMapping("/add")
     public ResponseEntity<?> addCompany(@RequestBody CreateCompany.Request request) {
 
-        Company company = this.companyService.save(request.getTicker());
-        return ResponseEntity.ok(company);
+        ScrapedResult scrapedResult = this.companyService.scrap(request.getTicker());
+
+        return ResponseEntity.ok(CreateCompany.Response.from(
+                this.companyService.storeCompanyAndDividend(scrapedResult)));
     }
 
     @DeleteMapping("/{ticker}")
     public ResponseEntity<?> deleteCompany(@PathVariable String ticker) {
-        String companyName = this.companyService.deleteCompany(ticker);
-        this.clearFinanceCache(companyName);
-        return ResponseEntity.ok(companyName);
+        return ResponseEntity.ok(DeleteCompany.Response.from(this.companyService.deleteCompany(ticker)));
     }
 
-    public void clearFinanceCache(String companyName) {
-        Objects.requireNonNull(this.redisCacheManager.getCache(CacheKey.KEY_FINANCE)).evict(companyName);
-    }
 
 }
