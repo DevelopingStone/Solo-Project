@@ -24,7 +24,7 @@ public class TokenProvider {
 
     private final MemberServiceImpl memberServiceImpl;
 
-    @Value("{spring.jwt.secret")
+    @Value("{spring.jwt.secret}")
     private String secretKey;
 
     /**
