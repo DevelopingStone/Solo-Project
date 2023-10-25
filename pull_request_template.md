@@ -1,9 +1,10 @@
 ### 변경사항
 **AS-IS**:
-- MemberServiceImpl 인스턴스 직접생성
+- 
 
 **TO-BE**:
-- MemberServiceImpl DI 설계로 변경
+- order - Order 클래스 추가
+- 최종 주문정보에 대한 데이터
 
 ### 테스트
 <!-- 본 변경사항이 테스트가 되었는지 기술해주세요 --> 
