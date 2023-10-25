@@ -3,8 +3,7 @@ package hello.core.repository;
 import hello.core.member.Member;
 
 
-
-public class DbMemberRepository implements MemberRepository{
+public class DbMemberRepository implements MemberRepository {
     @Override
     public void save(Member member) {
 
