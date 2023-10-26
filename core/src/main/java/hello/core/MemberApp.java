@@ -2,6 +2,7 @@ package hello.core;
 
 import hello.core.member.Grade;
 import hello.core.member.Member;
+import hello.core.repository.DbMemberRepository;
 import hello.core.service.MemberService;
 import hello.core.service.MemberServiceImpl;
 
@@ -9,7 +10,8 @@ public class MemberApp {
 
     public static void main(String[] args) {
 
-        MemberService memberService = new MemberServiceImpl();
+        DbMemberRepository dbMemberRepository = new DbMemberRepository();
+        MemberService memberService = new MemberServiceImpl(dbMemberRepository);
         Member user = new Member(1L, "hint", Grade.VIP);
         memberService.join(user);
 

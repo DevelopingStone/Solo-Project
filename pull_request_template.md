@@ -3,10 +3,11 @@
 - 
 
 **TO-BE**:
-- order - Order 클래스 추가
-- 최종 주문정보에 대한 데이터
+- OrderApp 구현
+- OrderService 구현
+- OrderServiceImpl 구현
 
 ### 테스트
 <!-- 본 변경사항이 테스트가 되었는지 기술해주세요 --> 
-- [x] 테스트 코드
-- [x] API 테스트
+- [ ] 테스트 코드
+- [ ] API 테스트
