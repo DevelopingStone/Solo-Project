@@ -3,11 +3,9 @@
 - 
 
 **TO-BE**:
-- OrderApp 구현
-- OrderService 구현
-- OrderServiceImpl 구현
+test : 구현된 부분 테스트코드 추가
 
 ### 테스트
 <!-- 본 변경사항이 테스트가 되었는지 기술해주세요 --> 
-- [ ] 테스트 코드
-- [ ] API 테스트
+- [x] 테스트 코드
+- [x] API 테스트
