@@ -19,11 +19,15 @@ public class OrderApp {
     public static void main(String[] args) {
 
 
-        MemberRepository memberRepository = new MemoryMemberRepository();
-        MemberService memberService = new MemberServiceImpl(memberRepository);
+//        MemberRepository memberRepository = new MemoryMemberRepository();
+//        DiscountPolicy discountPolicy = new RateDiscountPolicy();
+//        OrderService orderService = new OrderServiceImpl(memberRepository, discountPolicy);
 
-        DiscountPolicy discountPolicy = new RateDiscountPolicy();
-        OrderService orderService = new OrderServiceImpl(memberRepository, discountPolicy);
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
+
+
 
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);

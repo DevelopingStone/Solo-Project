@@ -10,8 +10,9 @@ public class MemberApp {
 
     public static void main(String[] args) {
 
-        DbMemberRepository dbMemberRepository = new DbMemberRepository();
-        MemberService memberService = new MemberServiceImpl(dbMemberRepository);
+        AppConfig appconfig = new AppConfig();
+        MemberService memberService = appconfig.memberService();
+
         Member user = new Member(1L, "hint", Grade.VIP);
         memberService.join(user);
 
