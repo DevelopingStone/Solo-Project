@@ -3,6 +3,7 @@ package hello.core;
 
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
+import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import hello.core.order.Order;
@@ -21,14 +22,14 @@ public class OrderApp {
         MemberRepository memberRepository = new MemoryMemberRepository();
         MemberService memberService = new MemberServiceImpl(memberRepository);
 
-        DiscountPolicy discountPolicy = new FixDiscountPolicy();
+        DiscountPolicy discountPolicy = new RateDiscountPolicy();
         OrderService orderService = new OrderServiceImpl(memberRepository, discountPolicy);
 
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
         memberService.join(member);
 
-        Order order = orderService.createOrder(memberId, "itemA", 10000);
+        Order order = orderService.createOrder(memberId, "itemA", 15000);
         System.out.println(order);
         System.out.println("order.calculatePrice() = " + order.calculatePrice());
 

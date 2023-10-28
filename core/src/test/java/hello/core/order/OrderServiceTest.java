@@ -2,6 +2,7 @@ package hello.core.order;
 
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
+import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import hello.core.repository.MemberRepository;
@@ -18,7 +19,7 @@ public class OrderServiceTest {
     MemberRepository memberRepository = new MemoryMemberRepository();
     MemberService memberService = new MemberServiceImpl(memberRepository);
 
-    DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    DiscountPolicy discountPolicy = new RateDiscountPolicy();
     OrderService orderService = new OrderServiceImpl(memberRepository, discountPolicy);
 
 
@@ -28,8 +29,8 @@ public class OrderServiceTest {
         Member member = new Member(memberId, "Hint", Grade.VIP);
         memberService.join(member);
 
-        Order order = orderService.createOrder(memberId, "itemA", 10000);
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
+        Order order = orderService.createOrder(memberId, "itemA", 12000);
+        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1200);
 
     }
 
