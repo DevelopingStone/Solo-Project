@@ -1,6 +1,6 @@
 package hello.core.repository;
 
-import hello.core.member.*;
+import hello.core.member.Member;
 
 public interface MemberRepository {
 
