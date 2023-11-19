@@ -1,7 +1,7 @@
-package hello.core.member;
+package personal.core.member;
 
-import hello.core.AppConfig;
-import hello.core.service.MemberService;
+import personal.core.AppConfig;
+import personal.core.service.MemberService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

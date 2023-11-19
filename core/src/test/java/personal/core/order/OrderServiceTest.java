@@ -1,10 +1,10 @@
-package hello.core.order;
+package personal.core.order;
 
-import hello.core.AppConfig;
-import hello.core.member.Grade;
-import hello.core.member.Member;
-import hello.core.service.MemberService;
-import hello.core.service.OrderService;
+import personal.core.AppConfig;
+import personal.core.member.Grade;
+import personal.core.member.Member;
+import personal.core.service.MemberService;
+import personal.core.service.OrderService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

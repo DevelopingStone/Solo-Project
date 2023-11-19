@@ -1,9 +1,9 @@
-package hello.core.discount;
+package personal.core.discount;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import hello.core.member.Grade;
-import hello.core.member.Member;
+import personal.core.member.Grade;
+import personal.core.member.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

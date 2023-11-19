@@ -1,7 +1,7 @@
-package hello.core.service;
+package personal.core.service;
 
-import hello.core.member.Member;
-import hello.core.repository.MemberRepository;
+import personal.core.member.Member;
+import personal.core.repository.MemberRepository;
 
 
 public class MemberServiceImpl implements MemberService {

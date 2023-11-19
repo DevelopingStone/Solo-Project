@@ -1,6 +1,6 @@
-package hello.core.service;
+package personal.core.service;
 
-import hello.core.order.Order;
+import personal.core.order.Order;
 
 public interface OrderService {
 

@@ -1,6 +1,6 @@
-package hello.core.repository;
+package personal.core.repository;
 
-import hello.core.member.Member;
+import personal.core.member.Member;
 
 public interface MemberRepository {
 

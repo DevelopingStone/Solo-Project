@@ -1,4 +1,4 @@
-package hello.core.member;
+package personal.core.member;
 
 public enum Grade {
 

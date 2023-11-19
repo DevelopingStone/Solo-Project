@@ -1,7 +1,7 @@
-package hello.core.service;
+package personal.core.service;
 
 
-import hello.core.member.Member;
+import personal.core.member.Member;
 
 public interface MemberService {
 

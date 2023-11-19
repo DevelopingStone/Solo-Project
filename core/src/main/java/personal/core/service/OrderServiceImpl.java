@@ -1,9 +1,9 @@
-package hello.core.service;
+package personal.core.service;
 
-import hello.core.discount.DiscountPolicy;
-import hello.core.member.Member;
-import hello.core.order.Order;
-import hello.core.repository.MemberRepository;
+import personal.core.discount.DiscountPolicy;
+import personal.core.member.Member;
+import personal.core.order.Order;
+import personal.core.repository.MemberRepository;
 
 
 
@@ -22,6 +22,5 @@ public class OrderServiceImpl implements OrderService {
         Member member = memberRepository.findById(memberId);
         int discountPrice = discountPolicy.discount(member, itemPrice);
         return new Order(memberId, itemName, itemPrice, discountPrice);
-
     }
 }
