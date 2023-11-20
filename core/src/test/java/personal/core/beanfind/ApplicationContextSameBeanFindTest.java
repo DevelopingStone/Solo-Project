@@ -34,7 +34,6 @@ public class ApplicationContextSameBeanFindTest {
     @Test
     @DisplayName("특정 타입모두조회")
     void findAllBeanByType() {
-
         Map<String, MemberRepository> beansOfType = ac.getBeansOfType(MemberRepository.class);
         for (String key : beansOfType.keySet()) {
             System.out.println("key = " + key + "value = " + beansOfType.get(key));
@@ -45,7 +44,6 @@ public class ApplicationContextSameBeanFindTest {
 
     @Configuration
     static class SameBeanConfig {
-
         @Bean
         public MemberRepository memberRepository1() {
             return new MemoryMemberRepository();
@@ -56,6 +54,5 @@ public class ApplicationContextSameBeanFindTest {
             return new MemoryMemberRepository();
         }
     }
-
 
 }
