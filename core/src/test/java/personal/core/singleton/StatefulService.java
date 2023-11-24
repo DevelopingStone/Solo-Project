@@ -1,5 +1,7 @@
 package personal.core.singleton;
 
+import org.springframework.context.annotation.Bean;
+
 public class StatefulService {
 
     private int price;
@@ -10,6 +12,7 @@ public class StatefulService {
         this.price = price;
 
     }
+
 
     public int getPrice() {
         return price;
