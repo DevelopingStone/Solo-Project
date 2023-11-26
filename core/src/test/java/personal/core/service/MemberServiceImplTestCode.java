@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import personal.core.AppConfig;
 
-class MemberServiceImplTest {
+class MemberServiceImplTestCode {
 
     @Test
     void memberServiceTest() {

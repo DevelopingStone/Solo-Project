@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 import personal.core.repository.MemberRepository;
 import personal.core.repository.MemoryMemberRepository;
 
-public class ApplicationContextSameBeanFindTest {
+public class ApplicationContextSameBeanFindTestCode {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SameBeanConfig.class);
 

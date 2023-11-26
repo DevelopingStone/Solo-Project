@@ -1,13 +1,16 @@
 package personal.core.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import personal.core.member.Member;
 import personal.core.repository.MemberRepository;
 
-
+@Component
 public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
@@ -15,7 +18,6 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void join(Member member) {
         memberRepository.save(member);
-
     }
 
     @Override
