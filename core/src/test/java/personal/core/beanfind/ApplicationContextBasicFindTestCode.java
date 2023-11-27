@@ -11,7 +11,7 @@ import personal.core.AppConfig;
 import personal.core.service.MemberService;
 import personal.core.service.MemberServiceImpl;
 
-public class ApplicationContextBasicFindTest {
+public class ApplicationContextBasicFindTestCode {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 

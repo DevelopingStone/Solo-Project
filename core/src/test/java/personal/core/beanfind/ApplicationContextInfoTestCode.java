@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import personal.core.AppConfig;
 
-public class ApplicationContextInfoTest {
+public class ApplicationContextInfoTestCode {
 
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
