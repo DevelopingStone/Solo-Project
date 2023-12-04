@@ -4,6 +4,7 @@
  - Language: Java
  - Java: 11
  - IDE : IntelliJ
+ - gradle
 
 ---
 
