@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.gif</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.ico</url-pattern>
+        <url-pattern>*.swf</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+
+        <welcome-file>index.jsp</welcome-file>
+
+    </welcome-file-list>
+
+    <servlet>
+    <servlet-name>HistoryJSP</servlet-name>
+    <jsp-file>/History.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HistoryJSP</servlet-name>
+        <url-pattern>/History</url-pattern>
+    </servlet-mapping>
+
+</web-app>

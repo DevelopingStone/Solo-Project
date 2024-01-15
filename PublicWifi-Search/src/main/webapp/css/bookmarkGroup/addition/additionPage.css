@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+#bookmark-group-addition-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-color: #D8D8D8;
+}
+#bookmark-group-name-input-container{
+    text-align: left;
+}
+#bookmark-group-name{
+    background-color: #00FF00;
+    text-decoration-color: #FFFFFF;
+    width: 300px;
+    height: 40px;
+    border: solid 1px #D8D8D8;
+    text-align: center;
+
+}
+#bookmark-group-order{
+    background-color: #00FF00;
+    text-decoration-color: #FFFFFF;
+    width: 120px;
+    height: 40px;
+    border: solid 1px #D8D8D8;
+    text-align: center;
+    background-color: gray;
+
+}
+
+#bookmark-group-order-container {
+    border: solid 1px #D8D8D8;
+    background-color: gray;
+}
+#bookmark-group-name-input-container{
+    border: solid 1px #D8D8D8;
+}
+#bookmark-group-addition-button-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
