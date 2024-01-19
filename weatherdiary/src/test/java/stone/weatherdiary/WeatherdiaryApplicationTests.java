@@ -10,19 +10,18 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class WeatherdiaryApplicationTests {
 
-
-    @Test
-    public void equalsTest() {
-        assertEquals(1, 1);
-    }
-
-    @Test
-    void nullTest() {
-        assertNull(null);
-    }
-
-    @Test
-    void trueTest() {
-        Assertions.assertTrue(1 == 1);
-    }
+//    @Test
+//    public void equalsTest() {
+//        assertEquals(1, 1);
+//    }
+//
+//    @Test
+//    void nullTest() {
+//        assertNull(null);
+//    }
+//
+//    @Test
+//    void trueTest() {
+//        Assertions.assertTrue(1 == 1);
+//    }
 }
