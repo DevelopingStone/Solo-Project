@@ -15,8 +15,6 @@ import stone.weatherdiary.service.DiaryService;
 
 @RestController
 @RequestMapping("/diary")
-//@AllArgsConstructor
-//@NoArgsConstructor
 public class DiaryController {
 
 
