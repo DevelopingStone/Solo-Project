@@ -22,7 +22,7 @@ public class DiaryController {
     private final DiaryService diaryService;
 
 
-    @PostMapping("/create?date")
+    @PostMapping("/create")
     public ResponseEntity<String> diaryCreate(@RequestParam @DateTimeFormat(iso = ISO.DATE) LocalDate date,
                                               @RequestBody String text) {
         diaryService.createDiary(date, text);
