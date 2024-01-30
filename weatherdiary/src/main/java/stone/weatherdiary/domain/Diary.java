@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Entity
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -32,7 +33,7 @@ public class Diary {
 
     private String text;
 
-    @Column(unique = true)
+//    @Column(unique = true)
     private LocalDate date;
 
 

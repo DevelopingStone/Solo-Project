@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -41,9 +42,6 @@ public class DiaryService {
 
     }
 
-    public Diary checkDiary(LocalDate date) {
-        return diaryRepository.findByDate(date);
-    }
 
     private String getWeatherString() {
         String apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=" + apikey;
@@ -121,5 +119,21 @@ public class DiaryService {
         return nowDiary;
     }
 
+    public List<Diary> readDiary(LocalDate date) {
+        return diaryRepository.findAllByDate(date);
+    }
+
+    public List<Diary> readListDiary(LocalDate startDate, LocalDate endDate) {
+        return diaryRepository.findAllByDateBetween(startDate, endDate);
+    }
+
+    public Diary updateDiary(LocalDate updateDate, String text) throws IllegalAccessException {
+        if (!diaryRepository.findByDate(updateDate)) {
+            throw new IllegalAccessException("없는데이터");
+        }
+        Diary firstByDate = diaryRepository.getFirstByDate(updateDate);
+        firstByDate.setText(text);
+        return diaryRepository.save(firstByDate);
+    }
 }
 
