@@ -3,10 +3,12 @@ package stone.weatherdiary.controller;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import lombok.AllArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -47,15 +49,22 @@ public class DiaryController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Diary> updateDiary(@RequestParam @DateTimeFormat(iso = ISO.DATE) LocalDate updateDate,
+    public ResponseEntity<Diary> updateDiary(@RequestParam @DateTimeFormat(iso = ISO.DATE) LocalDate date,
                                              @RequestBody String text) {
-        Diary diary;
-        try {
-            diary = diaryService.updateDiary(updateDate, text);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException("없는 데이터 입니다.");
-        }
+        Diary diary = diaryService.updateDiary(date, text);
+
         return ResponseEntity.ok(diary);
+    }
+
+    @DeleteMapping("/delete")
+    public ResponseEntity<Optional<Diary>> deleteDiary(@RequestParam Long id) {
+
+        return ResponseEntity.ok(diaryService.deleteDiary(id));
+    }
+
+    @DeleteMapping("/deleteAll")
+    public ResponseEntity<Optional<Diary>> deleteAllDiary(@RequestParam @DateTimeFormat(iso = ISO.DATE) LocalDate date) {
+        return ResponseEntity.ok(diaryService.deleteAllDiary(date));
     }
 
 

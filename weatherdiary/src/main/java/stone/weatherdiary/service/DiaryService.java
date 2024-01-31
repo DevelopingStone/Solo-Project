@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -108,12 +109,8 @@ public class DiaryService {
     }
 
     private Diary setDbData(LocalDate date, String text, Map<String, Object> parseWeather) {
-        Diary nowDiary = Diary.builder()
-                .weather(parseWeather.get("main").toString())
-                .icon(parseWeather.get("icon").toString())
-                .temp((Double) parseWeather.get("temp"))
-                .text(text)
-                .date(date)
+        Diary nowDiary = Diary.builder().weather(parseWeather.get("main").toString())
+                .icon(parseWeather.get("icon").toString()).temp((Double) parseWeather.get("temp")).text(text).date(date)
                 .build();
         diaryRepository.save(nowDiary);
         return nowDiary;
@@ -127,13 +124,30 @@ public class DiaryService {
         return diaryRepository.findAllByDateBetween(startDate, endDate);
     }
 
-    public Diary updateDiary(LocalDate updateDate, String text) throws IllegalAccessException {
-        if (!diaryRepository.findByDate(updateDate)) {
-            throw new IllegalAccessException("없는데이터");
+    public Diary updateDiary(LocalDate date, String text) {
+        Diary diary = diaryRepository.getFirstByDate(date);
+        if (diary == null) {
+            try {
+                throw new IllegalAccessException("없는 날씨일기 데이터 입니다. 유효한 날짜를 다시 입력해주세요.");
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException(e);
+            }
         }
-        Diary firstByDate = diaryRepository.getFirstByDate(updateDate);
-        firstByDate.setText(text);
-        return diaryRepository.save(firstByDate);
+        diary.setText(text);
+        return diaryRepository.save(diary);
+    }
+
+    public Optional<Diary> deleteDiary(Long id) {
+        Optional<Diary> byId = diaryRepository.findById(id);
+        if (byId.isPresent()) {
+            diaryRepository.deleteById(id);
+        }
+
+        return byId;
+    }
+
+    public Optional<Diary> deleteAllDiary(LocalDate date) {
+        return diaryRepository.deleteAllByDate(date);
     }
 }
 
