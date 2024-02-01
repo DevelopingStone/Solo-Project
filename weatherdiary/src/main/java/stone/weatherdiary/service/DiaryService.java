@@ -16,10 +16,12 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import stone.weatherdiary.domain.Diary;
 import stone.weatherdiary.repository.DiaryRepository;
 
 @Service
+@Transactional(readOnly = false)
 public class DiaryService {
 
     private final DiaryRepository diaryRepository;

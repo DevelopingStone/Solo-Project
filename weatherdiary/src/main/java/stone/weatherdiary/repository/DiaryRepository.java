@@ -24,6 +24,5 @@ public interface DiaryRepository extends JpaRepository<Diary, Long> {
 
     void deleteById(Long id);
 
-    @Transactional
     Optional<Diary> deleteAllByDate(LocalDate date);
 }
