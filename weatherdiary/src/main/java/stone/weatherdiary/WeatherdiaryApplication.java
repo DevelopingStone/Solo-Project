@@ -13,7 +13,6 @@ public class WeatherdiaryApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(WeatherdiaryApplication.class, args);
-
     }
 
 }

@@ -24,9 +24,7 @@ import stone.weatherdiary.service.DiaryService;
 @AllArgsConstructor
 public class DiaryController {
 
-
     private final DiaryService diaryService;
-
 
     @PostMapping("/create")
     public ResponseEntity<Diary> diaryCreate(@RequestParam @DateTimeFormat(iso = ISO.DATE) LocalDate date,
@@ -52,13 +50,11 @@ public class DiaryController {
     public ResponseEntity<Diary> updateDiary(@RequestParam @DateTimeFormat(iso = ISO.DATE) LocalDate date,
                                              @RequestBody String text) {
         Diary diary = diaryService.updateDiary(date, text);
-
         return ResponseEntity.ok(diary);
     }
 
     @DeleteMapping("/delete")
     public ResponseEntity<Optional<Diary>> deleteDiary(@RequestParam Long id) {
-
         return ResponseEntity.ok(diaryService.deleteDiary(id));
     }
 
