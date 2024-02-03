@@ -52,7 +52,7 @@ public class DiaryService {
         Map<String, Object> parseWeather = parseWeather(weatherData);
 
 //        날씨 데이터 가져오기 ( DB )
-//        DateWeather dateWeather = getDateWeather(date);
+        DateWeather dateWeather = getDateWeather(date);
 
 
         logger.info("end to create diary");
