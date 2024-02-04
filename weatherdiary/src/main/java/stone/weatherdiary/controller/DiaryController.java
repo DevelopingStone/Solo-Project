@@ -8,7 +8,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import stone.weatherdiary.domain.Diary;
+import stone.weatherdiary.error.InvalidDate;
 import stone.weatherdiary.service.DiaryService;
 
 @RequestMapping("/diary")
@@ -59,7 +62,8 @@ public class DiaryController {
     }
 
     @DeleteMapping("/deleteAll")
-    public ResponseEntity<Optional<Diary>> deleteAllDiary(@RequestParam @DateTimeFormat(iso = ISO.DATE) LocalDate date) {
+    public ResponseEntity<Optional<Diary>> deleteAllDiary(
+            @RequestParam @DateTimeFormat(iso = ISO.DATE) LocalDate date) {
         return ResponseEntity.ok(diaryService.deleteAllDiary(date));
     }
 

@@ -23,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 import stone.weatherdiary.WeatherdiaryApplication;
 import stone.weatherdiary.domain.DateWeather;
 import stone.weatherdiary.domain.Diary;
+import stone.weatherdiary.error.InvalidDate;
 import stone.weatherdiary.repository.DateWeatherRepository;
 import stone.weatherdiary.repository.DiaryRepository;
 
@@ -30,10 +31,9 @@ import stone.weatherdiary.repository.DiaryRepository;
 @Transactional(readOnly = false)
 public class DiaryService {
 
+    private static final Logger logger = LoggerFactory.getLogger(WeatherdiaryApplication.class);
     private final DiaryRepository diaryRepository;
-
     private final DateWeatherRepository dateWeatherRepository;
-
     @Value("${weatherperson.key}")
     private String apikey;
 
@@ -53,7 +53,6 @@ public class DiaryService {
 
 //        날씨 데이터 가져오기 ( DB )
         DateWeather dateWeather = getDateWeather(date);
-
 
         logger.info("end to create diary");
 
@@ -145,6 +144,11 @@ public class DiaryService {
     }
 
     public List<Diary> readDiary(LocalDate date) {
+
+        if (date.isAfter(LocalDate.ofYearDay(3050, 1))) {
+            throw new InvalidDate();
+        }
+
         logger.debug("started to read diary");
         return diaryRepository.findAllByDate(date);
     }
@@ -199,7 +203,5 @@ public class DiaryService {
                 temperature((Double) parseWeather.get("temp")).
                 build();
     }
-
-    private static final Logger logger = LoggerFactory.getLogger(WeatherdiaryApplication.class);
 }
 
