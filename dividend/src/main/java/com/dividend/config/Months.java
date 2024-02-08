@@ -2,6 +2,7 @@ package com.dividend.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.hibernate.boot.model.naming.IllegalIdentifierException;
 
 @Getter
 @AllArgsConstructor
@@ -31,5 +32,5 @@ public enum Months {
         }
         throw new IllegalArgumentException(months + "은 유효하지 않는 달 입니다.");
     }
-
+    
 }

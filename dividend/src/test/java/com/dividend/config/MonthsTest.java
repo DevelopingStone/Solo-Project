@@ -22,6 +22,6 @@ class MonthsTest {
         // give
         String invalidMonth = "Invalid Value";
         // when & then
-        assertThrows(IllegalArgumentException.class, () -> Months.JAN.numOfString(invalidMonth));
+        assertThrows(IllegalArgumentException.class, () -> Months.numOfString(invalidMonth));
     }
 }

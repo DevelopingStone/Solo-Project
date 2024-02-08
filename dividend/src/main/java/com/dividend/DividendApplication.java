@@ -7,6 +7,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -14,7 +15,9 @@ public class DividendApplication {
 
 
     public static void main(String[] args) {
-//        SpringApplication.run(DividendApplication.class, args);
+
+        SpringApplication.run(DividendApplication.class, args);
+
         final String URL = "https://finance.yahoo.com/quote/COKE/history?period1=99100800&period2=1707091200&interval=1mo&filter=history&frequency=1mo&includeAdjustedClose=true";
         try {
             Connection connection = Jsoup.connect(URL);
@@ -26,7 +29,7 @@ public class DividendApplication {
             Element tbody = element.children().get(1);
             for (Element e : tbody.children()) {
                 String txt = e.text();
-                if (!txt.endsWith("Dividend")) {
+                if (!txt.endsWith("DividendRepository")) {
                     continue;
                 }
                 String[] splits = txt.split(" ");
@@ -42,8 +45,5 @@ public class DividendApplication {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
     }
-
 }

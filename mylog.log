@@ -1,112 +1,74 @@
-16:32:29.405 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
-16:32:29.404 [main] INFO  com.dividend.DividendApplication - Starting DividendApplication using Java 11.0.22 on DESKTOP-J6PKINC with PID 19720 (C:\BackEnd\actual-dividend\dividend\build\classes\java\main started by Stone in C:\BackEnd\actual-dividend)
-16:32:29.408 [main] INFO  com.dividend.DividendApplication - No active profile set, falling back to default profiles: default
-16:32:29.974 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-16:32:29.974 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-16:32:29.985 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
-16:32:29.996 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-16:32:29.997 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-16:32:30.006 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
-16:32:30.523 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-16:32:30.532 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-16:32:30.533 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-16:32:30.533 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-16:32:30.621 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-16:32:30.621 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1169 ms
-16:32:30.645 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-16:32:30.725 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-16:32:30.730 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dividend'
-16:32:30.946 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-16:32:30.987 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
-16:32:31.084 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-16:32:31.177 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-16:32:31.337 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-16:32:31.347 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-16:32:31.391 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-16:32:31.752 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+20:16:42.635 [main] INFO  com.dividend.DividendApplication - Starting DividendApplication using Java 11.0.22 on DESKTOP-J6PKINC with PID 15624 (C:\BackEnd\actual-dividend\dividend\out\production\classes started by Stone in C:\BackEnd\actual-dividend)
+20:16:42.631 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+20:16:42.650 [main] INFO  com.dividend.DividendApplication - No active profile set, falling back to default profiles: default
+20:16:43.861 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+20:16:43.862 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:16:43.978 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
+20:16:44.008 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+20:16:44.010 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:16:44.037 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.dividend.repository.CompanyRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+20:16:44.038 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.dividend.repository.DividendRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+20:16:44.038 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+20:16:44.898 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:16:44.913 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:16:44.914 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:16:44.915 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+20:16:45.069 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:16:45.069 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2320 ms
+20:16:45.309 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:16:45.415 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+20:16:45.659 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:16:45.830 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:16:46.293 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:16:46.327 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+20:16:47.531 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:16:47.543 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:16:47.625 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:16:49.055 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: 703b7a5c-2fa8-4030-86fb-b378786b965f
+Using generated security password: 943e93a8-c4b9-45e9-859b-2bc4c79deaa2
 
-16:32:31.877 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79b4cff, org.springframework.security.web.context.SecurityContextPersistenceFilter@3700994c, org.springframework.security.web.header.HeaderWriterFilter@749ee0e3, org.springframework.security.web.csrf.CsrfFilter@33e4068, org.springframework.security.web.authentication.logout.LogoutFilter@40fcaae7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3fc5d397, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@ba87c11, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@58ac0823, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4d770bcd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eb48298, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7744195, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d705998, org.springframework.security.web.session.SessionManagementFilter@6bfbab1c, org.springframework.security.web.access.ExceptionTranslationFilter@52035328, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f2864c3]
-16:32:31.928 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-16:32:31.943 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-16:32:31.954 [main] INFO  com.dividend.DividendApplication - Started DividendApplication in 2.999 seconds (JVM running for 3.742)
-17:02:21.136 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-17:02:21.151 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-17:02:21.154 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-17:02:29.539 [main] INFO  com.dividend.DividendApplication - Starting DividendApplication using Java 11.0.22 on DESKTOP-J6PKINC with PID 29228 (C:\BackEnd\actual-dividend\dividend\out\production\classes started by Stone in C:\BackEnd\actual-dividend)
-17:02:29.539 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
-17:02:29.542 [main] INFO  com.dividend.DividendApplication - No active profile set, falling back to default profiles: default
-17:02:30.133 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-17:02:30.133 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-17:02:30.146 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-17:02:30.158 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-17:02:30.159 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-17:02:30.168 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
-17:02:30.642 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-17:02:30.649 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-17:02:30.650 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-17:02:30.650 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-17:02:30.735 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-17:02:30.736 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1158 ms
-17:02:30.758 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-17:02:30.842 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-17:02:30.847 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dividend'
-17:02:30.937 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-17:02:30.978 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
-17:02:31.081 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-17:02:31.216 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-17:02:31.418 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-17:02:31.428 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-17:02:31.476 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-17:02:32.111 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+20:16:49.232 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e5ed0d4, org.springframework.security.web.context.SecurityContextPersistenceFilter@10ffe32f, org.springframework.security.web.header.HeaderWriterFilter@1dbfbd94, org.springframework.security.web.csrf.CsrfFilter@2f03fdc0, org.springframework.security.web.authentication.logout.LogoutFilter@914ab92, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@278cbf5a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1952ad9d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@61c0fb12, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3c717ef2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67d55a46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@779136bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56f19f36, org.springframework.security.web.session.SessionManagementFilter@2e3b4394, org.springframework.security.web.access.ExceptionTranslationFilter@12b66c89, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11678469]
+20:16:49.328 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:16:49.362 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:16:49.374 [main] INFO  com.dividend.DividendApplication - Started DividendApplication in 7.813 seconds (JVM running for 9.197)
+20:18:05.445 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:18:05.449 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:18:05.461 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:18:10.712 [main] INFO  com.dividend.DividendApplication - Starting DividendApplication using Java 11.0.22 on DESKTOP-J6PKINC with PID 18852 (C:\BackEnd\actual-dividend\dividend\out\production\classes started by Stone in C:\BackEnd\actual-dividend)
+20:18:10.712 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+20:18:10.718 [main] INFO  com.dividend.DividendApplication - No active profile set, falling back to default profiles: default
+20:18:11.976 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+20:18:11.976 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:18:12.103 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 2 JPA repository interfaces.
+20:18:12.135 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+20:18:12.137 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+20:18:12.158 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.dividend.repository.CompanyRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+20:18:12.159 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.dividend.repository.DividendRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+20:18:12.159 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+20:18:13.095 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:18:13.110 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:18:13.111 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:18:13.111 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+20:18:13.280 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:18:13.281 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2487 ms
+20:18:13.465 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:18:13.532 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+20:18:13.734 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:18:13.873 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:18:14.288 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:18:14.319 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+20:18:15.891 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:18:15.906 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:18:15.989 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:18:17.092 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: 607ee739-9225-4cd6-923b-7ee8d7752514
+Using generated security password: 0fb9e5fa-c3b2-405d-bc7a-89d853d4e526
 
-17:02:32.233 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58f97013, org.springframework.security.web.context.SecurityContextPersistenceFilter@622ba721, org.springframework.security.web.header.HeaderWriterFilter@15c1b543, org.springframework.security.web.csrf.CsrfFilter@3c46e6f6, org.springframework.security.web.authentication.logout.LogoutFilter@45273d40, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7305cfb1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@19d76106, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7d70ba18, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@61becbcf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7509226c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f01fb5c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a07e6ca, org.springframework.security.web.session.SessionManagementFilter@6aae82cc, org.springframework.security.web.access.ExceptionTranslationFilter@33f81280, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e1ad7de]
-17:02:32.318 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-17:02:32.337 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-17:02:32.350 [main] INFO  com.dividend.DividendApplication - Started DividendApplication in 3.302 seconds (JVM running for 4.328)
-17:02:44.514 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-17:02:44.515 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-17:02:44.516 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-17:02:44.691 [http-nio-8080-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [146] milliseconds.
-20:09:00.636 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-20:09:00.638 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-20:09:00.641 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-20:09:06.905 [main] INFO  com.dividend.DividendApplication - Starting DividendApplication using Java 11.0.22 on DESKTOP-J6PKINC with PID 5208 (C:\BackEnd\actual-dividend\dividend\out\production\classes started by Stone in C:\BackEnd\actual-dividend)
-20:09:06.909 [main] INFO  com.dividend.DividendApplication - No active profile set, falling back to default profiles: default
-20:09:06.908 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
-20:09:07.454 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-20:09:07.455 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-20:09:07.466 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
-20:09:07.476 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-20:09:07.477 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-20:09:07.487 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
-20:09:07.910 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-20:09:07.918 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-20:09:07.918 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-20:09:07.919 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-20:09:07.999 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-20:09:07.999 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1052 ms
-20:09:08.022 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-20:09:08.104 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-20:09:08.109 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dividend'
-20:09:08.202 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-20:09:08.243 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
-20:09:08.344 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-20:09:08.441 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-20:09:08.600 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-20:09:08.609 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-20:09:08.650 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-20:09:09.131 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
-
-Using generated security password: c76adef1-9a03-4464-807f-e5861a120a4e
-
-20:09:09.217 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49665f92, org.springframework.security.web.context.SecurityContextPersistenceFilter@75c77add, org.springframework.security.web.header.HeaderWriterFilter@4c9cce17, org.springframework.security.web.csrf.CsrfFilter@56a9a7b5, org.springframework.security.web.authentication.logout.LogoutFilter@47ffa248, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45b08b17, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1b7a4930, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@b68932b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@195cbf5e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53df7e67, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19d76106, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77b27b57, org.springframework.security.web.session.SessionManagementFilter@63a7af06, org.springframework.security.web.access.ExceptionTranslationFilter@7a587e84, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71687d8f]
-20:09:09.291 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-20:09:09.305 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-20:09:09.315 [main] INFO  com.dividend.DividendApplication - Started DividendApplication in 2.903 seconds (JVM running for 3.695)
-20:10:18.650 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-20:10:18.651 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-20:10:18.654 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:18:17.256 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@237bdbcb, org.springframework.security.web.context.SecurityContextPersistenceFilter@337e573b, org.springframework.security.web.header.HeaderWriterFilter@3adb4cc8, org.springframework.security.web.csrf.CsrfFilter@20b921be, org.springframework.security.web.authentication.logout.LogoutFilter@345d641e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@54d2887a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@232be28d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@16a15261, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1443539, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@145f1f97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d884a19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36ec4071, org.springframework.security.web.session.SessionManagementFilter@f9ac719, org.springframework.security.web.access.ExceptionTranslationFilter@13868c41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62cb977a]
+20:18:17.353 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:18:17.384 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:18:17.399 [main] INFO  com.dividend.DividendApplication - Started DividendApplication in 7.64 seconds (JVM running for 9.101)
+20:28:45.536 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:28:45.539 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:28:45.552 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
