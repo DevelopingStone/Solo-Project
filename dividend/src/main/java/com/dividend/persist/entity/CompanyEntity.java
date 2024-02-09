@@ -1,31 +1,33 @@
-package com.dividend.entity;
+package com.dividend.persist.entity;
 
-import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Getter
 @Builder
-public class DividendEntity {
+public class CompanyEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
     private Long id;
 
-    //    @OneToMany
-    private Long companyId;
+    private String name;
 
-    private LocalDateTime date;
-
-    private String dividend;
-
+    @Column(unique = true)
+    private String ticker;
 
 }
