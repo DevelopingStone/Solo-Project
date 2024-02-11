@@ -1,6 +1,7 @@
 package com.dividend.entity;
 
 
+import com.dividend.model.Company;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,9 +13,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity
 @Getter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
 public class CompanyEntity {
 
     @Id
@@ -26,5 +30,6 @@ public class CompanyEntity {
 
     @Column(unique = true)
     private String ticker;
+
 
 }

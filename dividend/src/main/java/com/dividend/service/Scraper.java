@@ -1,0 +1,11 @@
+package com.dividend.service;
+
+import com.dividend.model.Company;
+import com.dividend.model.ScrapedResult;
+
+public interface Scraper {
+
+    Company scrapCompanyByTicker(String ticker);
+
+    ScrapedResult scrap(Company company);
+}

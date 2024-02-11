@@ -13,6 +13,6 @@ public class Dividend {
 
     private LocalDateTime date;
 
-    private double dividend;
+    private String dividend;
 
 }
