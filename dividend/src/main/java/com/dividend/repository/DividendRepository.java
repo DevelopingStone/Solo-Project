@@ -1,8 +1,10 @@
-package com.dividend.persist.repository;
+package com.dividend.repository;
 
-import com.dividend.persist.entity.DividendEntity;
+import com.dividend.entity.DividendEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface DividendRepository extends JpaRepository<DividendEntity, Long> {
 
 }

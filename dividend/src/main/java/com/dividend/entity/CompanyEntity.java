@@ -1,4 +1,4 @@
-package com.dividend.persist.entity;
+package com.dividend.entity;
 
 
 import javax.persistence.Column;
@@ -13,11 +13,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
 @Getter
-@Builder
+@ToString
 public class CompanyEntity {
 
     @Id

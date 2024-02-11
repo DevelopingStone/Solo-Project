@@ -1,4 +1,4 @@
-package com.dividend.persist.entity;
+package com.dividend.entity;
 
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
@@ -12,11 +12,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @ToString
-@Builder
 public class DividendEntity {
 
     @Id
@@ -28,7 +25,7 @@ public class DividendEntity {
 
     private LocalDateTime date;
 
-    private String dividend;
+    private double dividend;
 
 
 }
