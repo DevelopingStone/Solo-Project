@@ -1,0 +1,406 @@
+[2024-02-02 20:22:48:5466236][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 17440 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:22:48:5466237][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:22:48:5466387][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:22:48:5466397][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:22:49:5466452][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:22:49:5466452][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:22:49:5466453][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:22:49:5466469][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:22:49:5466469][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 230 ms
+[2024-02-02 20:22:49:5466493][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:22:49:5466502][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:22:49:5466503][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+[2024-02-02 20:22:49:5466512][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@438f539e
+[2024-02-02 20:22:49:5466513][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+[2024-02-02 20:22:49:5466542][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:22:49:5466547][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:22:49:5466590][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:22:49:5466608][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:22:49:5466699][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:22:49:5466708][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:22:49:5466711][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 0.499 seconds (process running for 5467.093)
+[2024-02-02 20:22:49:5466712][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2024-02-02 20:28:21:5799238][File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-02-02 20:28:21:5799249][Thread-48] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:28:21:5799252][Thread-48] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:28:21:5799252][Thread-48] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+[2024-02-02 20:28:21:5799255][Thread-48] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+[2024-02-02 20:28:21:5799334][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 17440 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:28:21:5799334][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:28:22:5799484][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:28:22:5799494][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:28:22:5799554][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:28:22:5799554][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:28:22:5799554][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:28:22:5799571][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:28:22:5799571][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 235 ms
+[2024-02-02 20:28:22:5799594][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:28:22:5799603][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:28:22:5799604][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+[2024-02-02 20:28:22:5799613][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17c90dc4
+[2024-02-02 20:28:22:5799613][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+[2024-02-02 20:28:22:5799643][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:28:22:5799649][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:28:22:5799697][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:28:22:5799718][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:28:22:5799825][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:28:22:5799835][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:28:22:5799839][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 0.534 seconds (process running for 5800.222)
+[2024-02-02 20:28:22:5799839][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2024-02-02 20:30:47:5944483][File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-02-02 20:30:47:5944495][Thread-52] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:30:47:5944497][Thread-52] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:30:47:5944498][Thread-52] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+[2024-02-02 20:30:47:5944500][Thread-52] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+[2024-02-02 20:30:47:5944588][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 17440 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:30:47:5944589][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:30:47:5944732][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:30:47:5944742][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:30:47:5944794][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:30:47:5944794][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:30:47:5944794][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:30:47:5944810][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:30:47:5944810][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 220 ms
+[2024-02-02 20:30:47:5944832][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:30:47:5944841][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:30:47:5944842][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
+[2024-02-02 20:30:47:5944851][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2546345b
+[2024-02-02 20:30:47:5944851][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
+[2024-02-02 20:30:47:5944876][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:30:47:5944882][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:30:47:5944929][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:30:47:5944949][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:30:47:5945034][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:30:47:5945045][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:30:47:5945048][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 0.486 seconds (process running for 5945.431)
+[2024-02-02 20:30:47:5945049][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2024-02-02 20:31:39:5996604][File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[2024-02-02 20:31:39:5996617][Thread-56] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:31:39:5996622][Thread-56] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:31:39:5996622][Thread-56] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+[2024-02-02 20:31:39:5996626][Thread-56] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+[2024-02-02 20:31:39:5996722][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 17440 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:31:39:5996722][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:31:39:5996909][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:31:39:5996921][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:31:39:5996984][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:31:39:5996984][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:31:39:5996985][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:31:39:5997003][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:31:39:5997003][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 279 ms
+[2024-02-02 20:31:39:5997038][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:31:39:5997049][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:31:39:5997050][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Starting...
+[2024-02-02 20:31:39:5997062][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4814c6a6
+[2024-02-02 20:31:39:5997062][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Start completed.
+[2024-02-02 20:31:39:5997091][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:31:39:5997096][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:31:39:5997145][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:31:39:5997163][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:31:39:5997257][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:31:39:5997269][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:31:39:5997274][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 0.58 seconds (process running for 5997.656)
+[2024-02-02 20:31:39:5997275][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2024-02-02 20:34:45:6182933][SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:34:45:6182934][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown initiated...
+[2024-02-02 20:34:45:6182937][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown completed.
+[2024-02-02 20:34:48:690][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 22168 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:34:48:692][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:34:48:750][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-02-02 20:34:48:750][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-02-02 20:34:48:1306][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:34:48:1362][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:34:49:1839][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:34:49:1845][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:34:49:1847][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:34:49:1847][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:34:49:1901][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:34:49:1902][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1152 ms
+[2024-02-02 20:34:49:2029][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:34:49:2081][restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.17.Final
+[2024-02-02 20:34:49:2083][restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+[2024-02-02 20:34:49:2349][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:34:49:2380][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-02-02 20:34:50:2621][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e1dbafd
+[2024-02-02 20:34:50:2623][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-02-02 20:34:51:3458][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:34:51:3500][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:34:51:3712][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:34:51:3794][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:34:51:4142][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:34:51:4156][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:34:51:4172][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:34:51:4181][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 3.985 seconds (process running for 4.573)
+[2024-02-02 20:36:07:80021][File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2024-02-02 20:36:07:80035][Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:36:07:80035][Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:36:07:80039][Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:36:07:80041][Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:36:07:80042][Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:36:07:80045][Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-02-02 20:36:07:80049][Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2024-02-02 20:36:07:80127][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 22168 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:36:07:80128][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:36:07:80288][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:36:07:80300][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:36:07:80368][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:36:07:80369][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:36:07:80369][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:36:07:80369][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:36:07:80388][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:36:07:80388][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 258 ms
+[2024-02-02 20:36:07:80423][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:36:07:80440][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:36:07:80441][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+[2024-02-02 20:36:08:80453][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@655a2586
+[2024-02-02 20:36:08:80453][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+[2024-02-02 20:36:08:80489][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:36:08:80495][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:36:08:80502][restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'diaryController': Resolution of declared constructors on bean Class [stone.weatherdiary.controller.DiaryController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2852688e] failed
+[2024-02-02 20:36:08:80502][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:36:08:80502][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+[2024-02-02 20:36:08:80503][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+[2024-02-02 20:36:08:80504][restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:36:08:80509][restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-02-02 20:36:08:80530][restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'diaryController': Resolution of declared constructors on bean Class [stone.weatherdiary.controller.DiaryController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2852688e] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:558)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:746)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:448)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1310)
+	at stone.weatherdiary.WeatherdiaryApplication.main(WeatherdiaryApplication.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: stone/weatherdiary/service/DiaryService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:367)
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: stone.weatherdiary.service.DiaryService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	... 27 common frames omitted
+[2024-02-02 20:37:11:144193][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 22168 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:37:11:144194][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:37:11:144378][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:37:11:144390][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:37:12:144466][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:37:12:144466][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:37:12:144466][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:37:12:144466][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:37:12:144487][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:37:12:144487][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 291 ms
+[2024-02-02 20:37:12:144519][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:37:12:144527][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:37:12:144529][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+[2024-02-02 20:37:12:144541][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1af972c6
+[2024-02-02 20:37:12:144542][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+[2024-02-02 20:37:12:144580][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:37:12:144588][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:37:12:144638][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:37:12:144659][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:37:12:144799][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:37:12:144805][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:37:12:144808][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:37:12:144812][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 0.653 seconds (process running for 145.203)
+[2024-02-02 20:37:12:144813][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2024-02-02 20:40:03:316023][File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2024-02-02 20:40:03:316035][Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:03:316035][Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:40:03:316038][Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:03:316039][Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:03:316040][Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:03:316041][Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+[2024-02-02 20:40:03:316046][Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+[2024-02-02 20:40:03:316163][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 22168 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:40:03:316163][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:40:03:316392][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:40:03:316409][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:40:04:316479][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:40:04:316479][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:04:316480][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:40:04:316480][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:40:04:316499][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:40:04:316499][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 333 ms
+[2024-02-02 20:40:04:316532][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:40:04:316542][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:40:04:316543][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+[2024-02-02 20:40:04:316554][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6af943a
+[2024-02-02 20:40:04:316555][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+[2024-02-02 20:40:04:316594][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:40:04:316601][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:04:316658][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:40:04:316685][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:40:04:316807][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:40:04:316816][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:04:316819][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:40:04:316823][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 0.702 seconds (process running for 317.214)
+[2024-02-02 20:40:04:316824][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2024-02-02 20:40:05:318239][File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+[2024-02-02 20:40:05:318250][Thread-14] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:05:318250][Thread-14] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:40:05:318251][Thread-14] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:05:318252][Thread-14] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:05:318253][Thread-14] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:05:318253][Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+[2024-02-02 20:40:05:318256][Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+[2024-02-02 20:40:05:318336][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 22168 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:40:05:318336][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:40:06:318486][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:40:06:318497][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:40:06:318552][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:40:06:318553][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:06:318553][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:40:06:318553][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:40:06:318569][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:40:06:318569][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 231 ms
+[2024-02-02 20:40:06:318594][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:40:06:318602][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:40:06:318603][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+[2024-02-02 20:40:06:318612][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d7b7ca7
+[2024-02-02 20:40:06:318612][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+[2024-02-02 20:40:06:318646][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:40:06:318651][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:06:318693][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:40:06:318712][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:40:06:318803][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:40:06:318808][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:06:318810][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:40:06:318813][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 0.503 seconds (process running for 319.204)
+[2024-02-02 20:40:06:318814][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2024-02-02 20:40:12:325326][File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+[2024-02-02 20:40:12:325339][Thread-18] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:12:325339][Thread-18] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:40:12:325341][Thread-18] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:12:325342][Thread-18] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:12:325343][Thread-18] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:12:325343][Thread-18] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+[2024-02-02 20:40:12:325346][Thread-18] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+[2024-02-02 20:40:13:325465][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 22168 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:40:13:325466][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:40:13:325686][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:40:13:325700][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:40:13:325770][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:40:13:325770][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:13:325771][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:40:13:325771][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:40:13:325794][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:40:13:325794][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 325 ms
+[2024-02-02 20:40:13:325829][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:40:13:325840][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:40:13:325841][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+[2024-02-02 20:40:13:325850][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@738e5534
+[2024-02-02 20:40:13:325850][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+[2024-02-02 20:40:13:325886][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:40:13:325891][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:13:325900][restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'diaryController' defined in file [C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes\stone\weatherdiary\controller\DiaryController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'stone.weatherdiary.service.DiaryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[2024-02-02 20:40:13:325900][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:13:325901][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+[2024-02-02 20:40:13:325901][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+[2024-02-02 20:40:13:325902][restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2024-02-02 20:40:13:325905][restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-02-02 20:40:13:325913][restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in stone.weatherdiary.controller.DiaryController required a bean of type 'stone.weatherdiary.service.DiaryService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'stone.weatherdiary.service.DiaryService' in your configuration.
+
+[2024-02-02 20:40:14:327426][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 22168 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:40:14:327426][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:40:15:327602][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:40:15:327613][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:40:15:327671][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:40:15:327671][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:15:327671][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:40:15:327671][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:40:15:327689][restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:40:15:327689][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 261 ms
+[2024-02-02 20:40:15:327711][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:40:15:327719][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:40:15:327720][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+[2024-02-02 20:40:15:327730][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60c80088
+[2024-02-02 20:40:15:327730][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+[2024-02-02 20:40:15:327760][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:40:15:327766][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:15:327813][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:40:15:327833][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:40:15:327927][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:40:15:327933][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:15:327935][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:40:15:327939][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 0.559 seconds (process running for 328.329)
+[2024-02-02 20:40:15:327939][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2024-02-02 20:40:30:343047][SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:30:343047][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+[2024-02-02 20:40:30:343051][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+[2024-02-02 20:40:34:769][restartedMain] INFO  s.w.WeatherdiaryApplication - Starting WeatherdiaryApplication using Java 17.0.9 with PID 16184 (C:\BackEnd\Weather-Diary\weatherdiary\out\production\classes started by Stone in C:\BackEnd\Weather-Diary)
+[2024-02-02 20:40:34:771][restartedMain] INFO  s.w.WeatherdiaryApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-02-02 20:40:34:824][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-02-02 20:40:34:824][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-02-02 20:40:35:1450][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-02-02 20:40:35:1514][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+[2024-02-02 20:40:36:2086][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-02-02 20:40:36:2092][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:36:2093][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-02-02 20:40:36:2094][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+[2024-02-02 20:40:36:2148][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-02-02 20:40:36:2148][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1323 ms
+[2024-02-02 20:40:36:2281][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-02-02 20:40:36:2356][restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.17.Final
+[2024-02-02 20:40:36:2358][restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+[2024-02-02 20:40:36:2664][restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-02-02 20:40:36:2695][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-02-02 20:40:37:2935][restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b31f5c2
+[2024-02-02 20:40:37:2937][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-02-02 20:40:37:3890][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-02-02 20:40:38:3949][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:40:38:4172][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DiaryRepository
+[2024-02-02 20:40:38:4262][restartedMain] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.repository.DateWeatherRepository
+[2024-02-02 20:40:38:4623][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2024-02-02 20:40:38:4639][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2024-02-02 20:40:38:4656][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-02-02 20:40:38:4665][restartedMain] INFO  s.w.WeatherdiaryApplication - Started WeatherdiaryApplication in 4.424 seconds (process running for 5.156)
+[2024-02-02 20:40:59:25277][http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-02-02 20:40:59:25277][http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-02-02 20:40:59:25278][http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-02-02 20:40:59:25303][http-nio-8080-exec-2] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: stone.weatherdiary.controller.DiaryController
+[2024-02-02 20:41:37:63759][http-nio-8080-exec-4] INFO  s.w.WeatherdiaryApplication - started to create diary
+[2024-02-02 20:41:38:64279][http-nio-8080-exec-4] INFO  s.w.WeatherdiaryApplication - end to create diary
+[2024-02-02 20:56:40:966062][SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-02-02 20:56:40:966065][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-02-02 20:56:40:966071][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
