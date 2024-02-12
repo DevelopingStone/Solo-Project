@@ -34,6 +34,7 @@ public class CompanyController {
 
         ScrapedResult scrapedResult = this.companyService.scrap(request.getTicker());
 
+
         return ResponseEntity.ok(CreateCompany.Response.from(
                 this.companyService.storeCompanyAndDividend(scrapedResult)));
     }
