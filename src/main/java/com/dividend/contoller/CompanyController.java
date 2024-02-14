@@ -44,5 +44,4 @@ public class CompanyController {
         return ResponseEntity.ok(DeleteCompany.Response.from(this.companyService.deleteCompany(ticker)));
     }
 
-
 }
