@@ -2,7 +2,6 @@ package com.example.ecommerce.controller;
 
 
 import com.example.ecommerce.service.EmailSendService;
-import feign.Response;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +13,7 @@ public class TestController {
     private final EmailSendService emailSendService;
 
     @GetMapping
-    public Response sendTestEmail(){
+    public String sendTestEmail() {
         return emailSendService.sendEmail();
     }
 
