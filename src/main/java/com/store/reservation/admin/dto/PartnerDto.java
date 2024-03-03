@@ -1,0 +1,39 @@
+package com.store.reservation.admin.dto;
+
+import com.store.reservation.admin.entity.PartnerEntity;
+import com.store.reservation.admin.entity.StoreEntity;
+import java.util.List;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class PartnerDto {
+
+    @NotBlank
+    private String partnerName;
+
+    @Email
+    private String email;
+
+    @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
+    private String phoneNumber;
+
+    private List<StoreEntity> stores;
+
+    public PartnerEntity toEntity(PartnerDto dto) {
+        return PartnerEntity.builder()
+                .partnerName(dto.getPartnerName())
+                .email(dto.getEmail())
+                .phoneNumber(dto.getPhoneNumber())
+                .stores(dto.getStores()) // 다른 필드들도 추가되어야 할 경우
+                .build();
+    }
+
+
+}
