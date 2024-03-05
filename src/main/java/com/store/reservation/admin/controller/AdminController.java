@@ -24,24 +24,36 @@ public class AdminController {
 
     /**
      * @param partnerDto 파트너회원가입
-     * @return 파트너회원가입 결과값
+     * @return 파트너 회원가입 결과값
      */
     @PostMapping("/partners/register")
     public ResponseEntity<PartnerEntity> registerPartner(@RequestBody PartnerDto partnerDto) {
-        PartnerEntity partnerEntity = partnerService.singUp(partnerDto);
+        PartnerEntity partnerEntity = partnerService.partnerSingUp(partnerDto);
         return ResponseEntity.ok(partnerEntity);
     }
 
+//    /**
+//     * @param storeDto 파트너 회원가입 여부
+//     */
+//    @PostMapping("/partners/isSignedUp")
+//    public void partnersIsSignedUp(@RequestBody StoreDto storeDto) {
+//        partnerService.isSignedUp(storeDto.getPartnerEntity().getPhoneNumber());
+//    }
 
     /**
-     * @param storeDto 상점등록
-     * @return 상점등록서비스 결과값
+     * @param storeDto 파트너가입여부조회, 상점등록
+     * @return 상점등록 서비스 결과값
      */
     @PostMapping("/stores/create")
-    public ResponseEntity<StoreEntity> storesCreate(@RequestBody StoreDto storeDto) {
-        StoreEntity storeEntity = storeService.singUp(storeDto);
-        return ResponseEntity.ok(storeEntity);
+    public Object storesCreate(@RequestBody StoreDto storeDto) {
+        boolean signedUp = partnerService.isSignedUp(storeDto.getPartnerEntity().getPhoneNumber());
+        if (signedUp) {
+            StoreEntity storeEntity = storeService.storeSignUp(storeDto);
+            return ResponseEntity.ok(storeEntity);
+        }
+        return "존재하지 않는 회원입니다. 파티너 회원가입 먼저 진행해주세요."; // 또는 다른 적절한 응답을 반환
     }
+
 
 
 }

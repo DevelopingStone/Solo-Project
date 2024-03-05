@@ -12,10 +12,16 @@ public class PartnerService {
 
     private final PartnerRepository partnerRepository;
 
-    public PartnerEntity singUp(PartnerDto partnerDto){
+    //    회원가입
+    public PartnerEntity partnerSingUp(PartnerDto partnerDto) {
         PartnerEntity entity = partnerDto.toEntity(partnerDto);
         return partnerRepository.save(entity);
     }
 
-
+    //    회원가입여부확인
+    public boolean isSignedUp(String phoneNumber) {
+        PartnerEntity partner = partnerRepository.findByPhoneNumber(phoneNumber)
+                .orElse(null);
+        return partner != null;
+    }
 }

@@ -1,7 +1,7 @@
 package com.store.reservation.admin.entity;
 
-import com.store.reservation.admin.dto.PartnerDto;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -36,7 +36,7 @@ public class PartnerEntity {
     @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
     private String phoneNumber;
 
-    @OneToMany(mappedBy = "partnerEntity")
+    @OneToMany(mappedBy = "partnerEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<StoreEntity> stores;
 
 }

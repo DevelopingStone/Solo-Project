@@ -31,7 +31,7 @@ public class PartnerDto {
                 .partnerName(dto.getPartnerName())
                 .email(dto.getEmail())
                 .phoneNumber(dto.getPhoneNumber())
-                .stores(dto.getStores()) // 다른 필드들도 추가되어야 할 경우
+                .stores(dto.getStores())
                 .build();
     }
 
