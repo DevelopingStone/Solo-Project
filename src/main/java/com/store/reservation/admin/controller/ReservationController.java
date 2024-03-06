@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/admin")
 @RequiredArgsConstructor
-public class AdminController {
+public class ReservationController {
 
     private final PartnerService partnerService;
 
@@ -46,14 +46,16 @@ public class AdminController {
      */
     @PostMapping("/stores/create")
     public Object storesCreate(@RequestBody StoreDto storeDto) {
-        boolean signedUp = partnerService.isSignedUp(storeDto.getPartnerEntity().getPhoneNumber());
+        String phoneNumber = "";
+//        boolean signedUp = partnerService.isSignedUp(storeDto.getPartnerEntity().getPhoneNumber());
+        boolean signedUp = partnerService.isSignedUp(storeDto.getPhoneNumber());
         if (signedUp) {
-            StoreEntity storeEntity = storeService.storeSignUp(storeDto);
+            phoneNumber = storeDto.getPhoneNumber();
+            StoreEntity storeEntity = storeService.storeSignUp(storeDto, phoneNumber);
             return ResponseEntity.ok(storeEntity);
         }
         return "존재하지 않는 회원입니다. 파티너 회원가입 먼저 진행해주세요."; // 또는 다른 적절한 응답을 반환
     }
-
 
 
 }

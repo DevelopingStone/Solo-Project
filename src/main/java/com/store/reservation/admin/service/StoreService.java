@@ -21,11 +21,10 @@ public class StoreService {
 //
 //    }
 
-//    상점등록
+    //    상점등록
     @Transactional
-    public StoreEntity storeSignUp(StoreDto storeDto){
-        StoreEntity storeEntity = storeDto.toEntity(storeDto);
-
+    public StoreEntity storeSignUp(StoreDto storeDto, String phoneNumber) {
+        StoreEntity storeEntity = storeDto.toEntity(storeDto,phoneNumber);
         return storeRepository.save(storeEntity);
     }
 

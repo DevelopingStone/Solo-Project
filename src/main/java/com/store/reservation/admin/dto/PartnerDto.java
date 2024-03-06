@@ -3,6 +3,7 @@ package com.store.reservation.admin.dto;
 import com.store.reservation.admin.entity.PartnerEntity;
 import com.store.reservation.admin.entity.StoreEntity;
 import java.util.List;
+import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -19,9 +20,11 @@ public class PartnerDto {
     private String partnerName;
 
     @Email
+    @Column(unique = true)
     private String email;
 
     @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
+    @Column(unique = true)
     private String phoneNumber;
 
     private List<StoreEntity> stores;
@@ -31,9 +34,6 @@ public class PartnerDto {
                 .partnerName(dto.getPartnerName())
                 .email(dto.getEmail())
                 .phoneNumber(dto.getPhoneNumber())
-                .stores(dto.getStores())
                 .build();
     }
-
-
 }

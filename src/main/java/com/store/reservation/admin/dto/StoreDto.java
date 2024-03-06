@@ -2,7 +2,10 @@ package com.store.reservation.admin.dto;
 
 import com.store.reservation.admin.entity.PartnerEntity;
 import com.store.reservation.admin.entity.StoreEntity;
+import javax.persistence.Column;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,6 +20,7 @@ import lombok.ToString;
 public class StoreDto {
 
     @NotBlank
+    @Column(unique = true)
     private String storeName;
 
     @NotBlank
@@ -25,14 +29,15 @@ public class StoreDto {
     @NotBlank
     private String description;
 
-    private PartnerEntity partnerEntity;
+    @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
+    private String phoneNumber;
 
-    public StoreEntity toEntity(StoreDto dto) {
+    public StoreEntity toEntity(StoreDto dto, String phoneNumber) {
         return StoreEntity.builder().
                 storeName(dto.getStoreName()).
                 location(dto.getLocation()).
                 description(dto.getDescription()).
-                partnerEntity(dto.getPartnerEntity()).
+                phoneNumber(phoneNumber).
                 build();
     }
 }
