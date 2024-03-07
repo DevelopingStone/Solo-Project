@@ -18,7 +18,7 @@ public class PartnerService {
         return partnerRepository.save(entity);
     }
 
-    //    회원가입여부확인
+    //    파트너회원가입 조회
     public boolean isSignedUp(String phoneNumber) {
         PartnerEntity partner = partnerRepository.findByPhoneNumber(phoneNumber)
                 .orElse(null);

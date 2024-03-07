@@ -15,12 +15,6 @@ public class StoreService {
     private final StoreRepository storeRepository;
     private final PartnerRepository partnerRepository;
 
-//    public StoreEntity singUp(StoreDto storeDto){
-//        StoreEntity entity = storeDto.toEntity(storeDto);
-//        return storeRepository.save(entity);
-//
-//    }
-
     //    상점등록
     @Transactional
     public StoreEntity storeSignUp(StoreDto storeDto, String phoneNumber) {
