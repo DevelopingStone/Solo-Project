@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -39,5 +40,11 @@ public class ReviewEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "store_id")
     private StoreEntity store;
+
+    @OneToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "member_id")
+//    private MemberEntity member;
+    @JoinColumn(name = "user_id", referencedColumnName = "userId") // userId 컬럼 참조
+    private MemberEntity member;
 
 }

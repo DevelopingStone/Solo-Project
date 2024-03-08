@@ -3,6 +3,7 @@ package com.store.reservation.member.service;
 import com.store.reservation.admin.entity.StoreEntity;
 import com.store.reservation.admin.repository.StoreRepository;
 import com.store.reservation.member.dto.ReviewDto;
+import com.store.reservation.member.entity.MemberEntity;
 import com.store.reservation.member.entity.ReviewEntity;
 import com.store.reservation.member.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
@@ -21,9 +22,13 @@ public class ReviewService {
     }
 
 
-
     public ReviewEntity reviewRegister(ReviewDto reviewDto) {
-        ReviewEntity entity = reviewDto.toEntity(reviewDto);
-        return reviewRepository.save(entity);
+        ReviewEntity reviewEntity = reviewDto.toEntity(reviewDto);
+        return reviewRepository.save(reviewEntity);
+    }
+
+    public MemberEntity singIn(String phoneNumber) {
+
+        return null;
     }
 }

@@ -14,8 +14,8 @@ public class PartnerService {
 
     //    회원가입
     public PartnerEntity partnerSingUp(PartnerDto partnerDto) {
-        PartnerEntity entity = partnerDto.toEntity(partnerDto);
-        return partnerRepository.save(entity);
+        PartnerEntity partnerEntity = partnerDto.toEntity(partnerDto);
+        return partnerRepository.save(partnerEntity);
     }
 
     //    파트너회원가입 조회
