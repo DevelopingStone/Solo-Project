@@ -21,16 +21,18 @@ public class SendSMSController {
     @Autowired
     public SendSMSController(SendSmsService sendSmsService) {
         this.sendSmsService = sendSmsService;
-        this.messageService = NurigoApp.INSTANCE.initialize("NCSO8SAGQJZTJ7OP", "WWZMQAXBFO5AOIASJF9YNOFAGZOF5CBT",
+        this.messageService = NurigoApp.INSTANCE.initialize("NCSO8SAGQJZTJ7OP", "CAJJUMRR4VHB3ONPDYC7EY5FJ0KSUC8N",
                 "https://api.coolsms.co.kr");
     }
 
     /**
-     * 단일 메시지 발송
+     * @param phoneNumber 인증 SMS 발송
+     * @return 인증코드 결과값
+     * EX) http://localhost:8080/send-one
      */
     @PostMapping("/send-one")
-    public String sendOne(@RequestBody MemberDto phoneNum) {
-        Message message = sendSmsService.sendSms(phoneNum);
+    public String sendOne(@RequestBody String phoneNumber) {
+        Message message = sendSmsService.sendSms(phoneNumber);
         this.messageService.sendOne(new SingleMessageSendingRequest(message));
         return message.getSubject();
     }

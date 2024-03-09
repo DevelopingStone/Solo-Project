@@ -1,6 +1,7 @@
 package com.store.reservation.member.dto;
 
 import com.store.reservation.admin.entity.StoreEntity;
+import com.store.reservation.member.entity.MemberEntity;
 import com.store.reservation.member.entity.ReviewEntity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -22,13 +23,16 @@ public class ReviewDto {
     @NotBlank
     private String memo;
     
-    private StoreEntity store; // 매장과의 관계
+    private StoreEntity store;
+
+    private MemberEntity member;
 
     public ReviewEntity toEntity(ReviewDto reviewDto) {
         return ReviewEntity.builder().
                 starRate(reviewDto.getStarRate()).
                 memo(reviewDto.getMemo()).
                 store(reviewDto.getStore()).
+                member(reviewDto.getMember()).
                 build();
     }
 

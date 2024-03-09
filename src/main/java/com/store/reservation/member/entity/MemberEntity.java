@@ -39,7 +39,8 @@ public class MemberEntity {
     @Column(unique = true)
     private String email;
 
-    @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
+    //    @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
+    @Pattern(regexp = "01(?:0|1|[6-9])[0-9]{7,8}")
     @Column(unique = true)
     private String phoneNumber;
 

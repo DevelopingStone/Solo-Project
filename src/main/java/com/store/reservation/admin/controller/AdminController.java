@@ -25,6 +25,7 @@ public class AdminController {
     /**
      * @param partnerDto 파트너회원가입
      * @return 파트너 회원가입 결과값
+     * EX) http://localhost:8080/admin/partners/register
      */
     @PostMapping("/partners/register")
     public ResponseEntity<PartnerEntity> registerPartner(@RequestBody PartnerDto partnerDto) {
@@ -36,6 +37,7 @@ public class AdminController {
     /**
      * @param storeDto 파트너회원가입 조회, 점장 상점등록
      * @return 상점등록 서비스 결과값
+     * EX) http://localhost:8080/admin/stores/create
      */
     @PostMapping("/stores/create")
     public Object storesCreate(@RequestBody StoreDto storeDto) {

@@ -13,6 +13,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+//    멤버회원 회원가입
     public MemberEntity singUp(MemberDto memberDto) {
         MemberEntity memberEntity = memberDto.toEntity(memberDto);
         return memberRepository.save(memberEntity);
