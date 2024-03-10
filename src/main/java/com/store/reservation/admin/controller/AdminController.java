@@ -52,7 +52,7 @@ public class AdminController {
     }
 
     /**
-     * 매장전체 검색
+     * 매장 검색
      * @return 매장인덱스 결과값
      * EX) http://localhost:8080/admin/store/all/search/
      */

@@ -7,6 +7,7 @@ import com.store.reservation.member.entity.MemberEntity;
 import com.store.reservation.member.entity.ReviewEntity;
 import com.store.reservation.member.repository.MemberRepository;
 import com.store.reservation.member.repository.ReviewRepository;
+import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -35,5 +36,10 @@ public class ReviewService {
     public MemberEntity signIn(String phoneNumber) {
         Optional<MemberEntity> memberOptional = memberRepository.findByPhoneNumber(phoneNumber);
         return memberOptional.orElseThrow(() -> new IllegalArgumentException("핸드폰 번호로 가입된 회원이 없습니다."));
+    }
+
+//    매장리뷰 검색
+    public List<ReviewEntity> reviewSearch(StoreEntity store) {
+        return  reviewRepository.findAllByStore(store);
     }
 }

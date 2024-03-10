@@ -8,7 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StoreRepository extends JpaRepository<StoreEntity, Long> {
-    StoreEntity findByStoreName(String storeName);
 
+    StoreEntity findByStoreName(String storeName);
     List<StoreEntity> findAllByStoreNameIsNotNull();
+
 }

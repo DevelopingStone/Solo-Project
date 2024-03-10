@@ -8,6 +8,7 @@ import com.store.reservation.member.entity.MemberEntity;
 import com.store.reservation.member.entity.ReviewEntity;
 import com.store.reservation.member.service.MemberService;
 import com.store.reservation.member.service.ReviewService;
+import java.util.List;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -27,10 +28,10 @@ public class MemberController {
     private final SendSMSController sendSMSController;
     private final ReviewService reviewService;
     private final MemberService memberService;
+    private MemberEntity member;
     private StoreEntity store;
     private String authKey;
 
-    private MemberEntity member;
 
 
     /**
@@ -97,6 +98,17 @@ public class MemberController {
         reviewDto.setMember(this.member);
         ReviewEntity reviewEntity = reviewService.reviewRegister(reviewDto);
         return ResponseEntity.ok(reviewEntity);
+    }
+
+    /**
+     * 매장리뷰 검색 (매장검색, 로그인 없이 리뷰등록할 경우 오류)
+     *
+     * @return 매장리뷰 결과값 EX) http://localhost:8080/member/review/search
+     */
+    @GetMapping("/review/search")
+    public ResponseEntity<List<ReviewEntity>> reviewSearch() {
+        List<ReviewEntity> reviewEntities = reviewService.reviewSearch(store);
+        return ResponseEntity.ok(reviewEntities);
     }
 
 
