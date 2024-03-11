@@ -1,17 +1,25 @@
 package com.store.reservation.reserve.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.store.reservation.member.entity.MemberEntity;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
-import javax.persistence.FetchType;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Setter
+@Getter
+@Entity
 public class ReserveEntity {
 
     @Id
@@ -24,17 +32,12 @@ public class ReserveEntity {
     @CreatedDate
     @Column(updatable = false)
     @JoinColumn(name = "reserve_time")
-    private LocalDateTime reserveTime ;
+    private LocalDateTime reserveTime;
 
     @JoinColumn(name = "arrival_state")
     private String arrivalState;
 
-    @JoinColumn(name = "reserve_state")
-    private String reserveState;
-
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
-    @JsonIgnore
-    private MemberEntity member;
+    private Long memberId;
 
 }
