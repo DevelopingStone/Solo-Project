@@ -26,20 +26,20 @@ public class ReviewService {
         return storeRepository.findByStoreName(storeSearch);
     }
 
-//   멤버회원 리뷰작성
+    //   멤버회원 리뷰작성
     public ReviewEntity reviewRegister(ReviewDto reviewDto) {
         ReviewEntity reviewEntity = reviewDto.toEntity(reviewDto);
         return reviewRepository.save(reviewEntity);
     }
 
-//    멤버회원 로그인
+    //    멤버회원 로그인
     public MemberEntity signIn(String phoneNumber) {
         Optional<MemberEntity> memberOptional = memberRepository.findByPhoneNumber(phoneNumber);
         return memberOptional.orElseThrow(() -> new IllegalArgumentException("핸드폰 번호로 가입된 회원이 없습니다."));
     }
 
-//    매장리뷰 검색
-    public List<ReviewEntity> reviewSearch(StoreEntity store) {
-        return  reviewRepository.findAllByStore(store);
+    //    매장리뷰 검색
+    public List<ReviewEntity> reviewSearch(Long storeId) {
+        return reviewRepository.findAllByStoreId(storeId);
     }
 }

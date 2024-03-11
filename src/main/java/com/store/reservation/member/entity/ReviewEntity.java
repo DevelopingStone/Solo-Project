@@ -1,5 +1,6 @@
 package com.store.reservation.member.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.store.reservation.admin.entity.StoreEntity;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -8,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -39,12 +39,12 @@ public class ReviewEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "store_id")
+    @JsonIgnore
     private StoreEntity store;
 
-    @OneToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "member_id")
-//    private MemberEntity member;
-    @JoinColumn(name = "user_id", referencedColumnName = "userId") // userId 컬럼 참조
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    @JsonIgnore
     private MemberEntity member;
 
 }

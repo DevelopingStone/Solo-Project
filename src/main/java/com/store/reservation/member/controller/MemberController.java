@@ -107,7 +107,7 @@ public class MemberController {
      */
     @GetMapping("/review/search")
     public ResponseEntity<List<ReviewEntity>> reviewSearch() {
-        List<ReviewEntity> reviewEntities = reviewService.reviewSearch(store);
+        List<ReviewEntity> reviewEntities = reviewService.reviewSearch(store.getId());
         return ResponseEntity.ok(reviewEntities);
     }
 
