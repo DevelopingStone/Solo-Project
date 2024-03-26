@@ -27,7 +27,7 @@
 -[ ] 카카오 Auth2.0 소셜로그인 
 -[ ] Authorization: JWT 사용
 -[ ] 최초 로그인시 정보제공 여부확인, 가입이후 자동로그인
-![img.png](img.png)
+![img.png](sms.png)
 
 ### 문자 인증
 - 본인 인증을 확인하기 위해 소셜로그인한 계정명의와 핸드폰이 일치해야 회원가입이 가능합니다.
@@ -39,20 +39,20 @@
 ### 이미지 업로드
 - 원하는 사진들을 업로드 할수 있습니다.
 -[ ] Amazon S3 사진 업로드
-![img_2.png](img_2.png)
+![img_2.png](image.png)
 
 ### 위치 서비스
 - 디폴트 값으로 결혼식장 위치 설정이 가능하고, 현재 나의 위치까지 거리를 파악할수 있습니다.
 -[ ] 카카오 API를 이용해 위치제공
-![img_3.png](img_3.png)
+![img_3.png](location.png)
 
 ### 댓글
 - 청첩장 커스터마이징을 완료한 URL 접속시 댓글을 작성할수 있습니다. 가능하다면 댓글다는 인원들의 IP or 카카오톡 ID 정보를 남길수 있게 해보려고 합니다.
 -[ ] 
-![img_4.png](img_4.png)
+![img_4.png](review.png)
 
-## ERD (이전프로젝트 예시파일, 현재 작성중)
-![erd](store_reservation_ERD.png)
+## ERD 
+![img_5.png](erd.png)
 
 
 
