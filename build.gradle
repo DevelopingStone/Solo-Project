@@ -23,6 +23,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
     implementation 'net.nurigo:sdk:4.3.0'
+    implementation 'com.google.code.gson:gson:2.8.8' // 현재 최신 버전 확인 후 사용
+
 
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
