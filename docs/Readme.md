@@ -63,7 +63,7 @@
 ![img_4.png](review.png)
 
 ## ERD 
-![img.png](erd.png)
+![erd.png](erd.png)
 
 
 ## PR 양식
