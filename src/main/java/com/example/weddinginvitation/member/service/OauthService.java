@@ -1,4 +1,4 @@
-package com.example.weddinginvitation.oauth.service;
+package com.example.weddinginvitation.member.service;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

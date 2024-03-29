@@ -2,8 +2,13 @@ package com.example.weddinginvitation.member.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,9 +21,11 @@ import lombok.NoArgsConstructor;
 public class MemberEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long member_id;
 
     @Email
+    @Column(unique = true)
     private String email;
 
     @Nullable
@@ -28,13 +35,15 @@ public class MemberEntity {
     @Column(unique = true)
     private String nick_name;
 
-    @Nullable
+    @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
+    @Column(unique = true)
+    @NotBlank
     private String phone_number;
 
-    @Nullable
-    private String text_number;
+    @NotBlank
+    private String text_authentication_number;
 
+    @NotNull
     private boolean text_authentication;
-
 
 }
