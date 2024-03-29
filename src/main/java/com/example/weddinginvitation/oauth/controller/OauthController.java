@@ -1,7 +1,7 @@
-package com.example.weddinginvitation.oauth2.controller;
+package com.example.weddinginvitation.oauth.controller;
 
 
-import com.example.weddinginvitation.oauth2.service.MemberService;
+import com.example.weddinginvitation.oauth.service.OauthService;
 import java.util.HashMap;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequiredArgsConstructor
 @RequestMapping(value = "/member")
-public class oauth2Controller {
+public class OauthController {
 
 
-    private final MemberService ms;
+    private final OauthService ms;
 
     @GetMapping("/kakaoLogin")
     public String kakaoLogin(@RequestParam(value = "code") String code) {
-        System.out.println("code : " + code);
         String access_Token = ms.getAccessToken(code);
 
         HashMap<String, Object> userInfo = ms.getUserInfo(access_Token);
+
         System.out.println("###access_Token#### : " + access_Token);
         System.out.println("###nickname#### : " + userInfo.get("nickname"));
         System.out.println("###email#### : " + userInfo.get("email"));
