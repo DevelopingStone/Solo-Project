@@ -20,16 +20,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequiredArgsConstructor
 @RequestMapping(value = "/member")
-public class OauthController {
+public class MemberController {
 
-    private static final Logger logger = LoggerFactory.getLogger(OauthController.class);
+    private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
     private final OauthService oauthService;
     private final MemberService memberService;
     private HashMap<String, Object> userInfo;
 
     /**
-     * @param code 카카오 소셜로그인
-     * @return 카카오 개인정보 리턴 값
+     * @param code 소셜로그인 인증코드 전달
+     * @return 액세스토큰으로 전달받은 개인정보 리턴 값
      */
     @GetMapping("/kakaoLogin")
     public ResponseEntity<HashMap<String, Object>> kakaoLogin(@RequestParam(value = "code") String code) {
@@ -53,6 +53,8 @@ public class OauthController {
         MemberEntity memberEntity = memberService.singUp(memberDto, userInfo);
         return ResponseEntity.ok(memberEntity);
     }
+
+
 
 
 }

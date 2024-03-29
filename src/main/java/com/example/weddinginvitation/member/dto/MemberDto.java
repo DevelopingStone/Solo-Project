@@ -1,6 +1,9 @@
 package com.example.weddinginvitation.member.dto;
 
+import com.example.weddinginvitation.member.config.Role;
 import com.example.weddinginvitation.member.entity.MemberEntity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import java.util.HashMap;
@@ -19,6 +22,9 @@ public class MemberDto {
 
     @Email
     private String email;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @Nullable
     private String name;
@@ -40,6 +46,7 @@ public class MemberDto {
     public MemberEntity toEntity(MemberDto memberDto, HashMap<String, Object> userInfo) {
         return MemberEntity.builder().
                 email((String) userInfo.get("email")).
+                role(memberDto.getRole()).
                 name(memberDto.getName()).
                 nick_name((String) userInfo.get("nickname")).
                 phone_number(memberDto.getPhone_number()).
