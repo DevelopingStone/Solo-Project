@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MemberController {
 
     private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-    private final SendSmsController sendSMSController;
+    private final sendSmsAuthenticationCodeController sendSMSAuthenticationCodeController;
     private final OauthService oauthService;
     private final MemberService memberService;
 
@@ -51,33 +51,21 @@ public class MemberController {
      * @param memberDto 핸드폰 인증번호 발송
      * @return 인증번호 (개발중에만 확인용으로 노출)
      */
-    @PostMapping("/sendSms")
-    public ResponseEntity<MemberEntity> sendSms(@RequestBody MemberDto memberDto) {
-//        String authenticationNumber = sendSMSController.sendOne(memberDto.getPhone_number());
-        String authenticationNumber = "242413";
-        MemberEntity sendSms = memberService.sendSms(memberDto, authenticationNumber);
-        return ResponseEntity.ok(sendSms);
+    @PostMapping("/sendSmsAuthenticationCode")
+    public ResponseEntity<MemberEntity> sendSmsAuthenticationCode(@RequestBody MemberDto memberDto) {
+        String authenticationNumber = sendSMSAuthenticationCodeController.sendOne(memberDto.getPhoneNumber());
+        MemberEntity memberEntity = memberService.sendSmsAuthenticationCode(memberDto, authenticationNumber);
+        return ResponseEntity.ok(memberEntity);
     }
 
     /**
      * @param memberDto 핸드폰 인증번호 확인
      * @return 인증번호 확인 (개발중에만 확인용으로 노출)
      */
-    @PostMapping("/sendSmsCheck")
-    public ResponseEntity<MemberEntity> sendSmsCheck(@RequestBody MemberDto memberDto) {
-        MemberEntity memberEntity = memberService.sendSmsCheck(memberDto.getTextAuthenticationNumber());
+    @PostMapping("/sendSmsAuthenticationCodeCheck")
+    public ResponseEntity<MemberEntity> sendSmsAuthenticationCodeCheck(@RequestBody MemberDto memberDto) {
+        MemberEntity memberEntity = memberService.sendSmsAuthenticationCodeCheck(memberDto.getTextAuthenticationNumber());
         return ResponseEntity.ok(memberEntity);
     }
-
-    /**
-     * @param memberDto 멤버 회원가입
-     * @return 회원가입 결과값
-     */
-//    @PostMapping("/singUp")
-//    public ResponseEntity<MemberEntity> singUp(@RequestBody MemberDto memberDto) {
-//        MemberEntity memberEntity = memberService.singUp(memberDto, userInfo, authenticationNumber);
-//        return ResponseEntity.ok(memberEntity);
-//    }
-
 
 }

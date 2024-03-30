@@ -15,12 +15,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
 @Setter
+@ToString
 public class MemberEntity {
 
     @Id
@@ -42,7 +44,6 @@ public class MemberEntity {
 
     @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
     @Column(unique = true)
-
     private String phoneNumber;
 
     private boolean textAuthentication;

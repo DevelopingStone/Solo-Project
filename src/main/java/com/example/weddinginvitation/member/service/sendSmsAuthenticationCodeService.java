@@ -5,10 +5,9 @@ import net.nurigo.sdk.message.model.Message;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SendSmsService {
+public class sendSmsAuthenticationCodeService {
 
-//    SMS인증코드 생성
-    public Message sendSms(String phoneNumber) {
+    public Message sendSmsAuthenticationCode(String phoneNumber) {
 
         Random rand = new Random();
         StringBuilder authKey = new StringBuilder();

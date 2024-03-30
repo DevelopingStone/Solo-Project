@@ -15,14 +15,21 @@ public class MemberService {
     private final MemberRepository memberRepository;
     private final MemberDto memberDto;
 
+    /**
+     * @param userInfo 액세스 토큰을 이용해 카카오 이메일,닉네임 데이터 가져옴 
+     * @return 레퍼지토리 저장
+     */
     public MemberEntity kakaoLogin(HashMap<String, Object> userInfo) {
-
         MemberEntity kakaoLoginData = memberDto.toEntity(userInfo);
         return memberRepository.save(kakaoLoginData);
-
     }
 
-    public MemberEntity sendSms(MemberDto memberDto, String authenticationNumber) {
+    /**
+     * @param memberDto 소셜로그인에서 가져오지 못하는 정보 추가기입
+     * @param authenticationNumber 문자인증 번호 
+     * @return 문자인증 성공 여부
+     */
+    public MemberEntity sendSmsAuthenticationCode(MemberDto memberDto, String authenticationNumber) {
 
         Optional<MemberEntity> byEmail = memberRepository.findByEmail(memberDto.getEmail());
 
@@ -36,21 +43,20 @@ public class MemberService {
 
     }
 
-    public MemberEntity sendSmsCheck(String authenticationNumber) {
+    /**
+     * @param authenticationNumber 문자인증 확인
+     * @return 회원가입 완료
+     */
+    public MemberEntity sendSmsAuthenticationCodeCheck(String authenticationNumber) {
         Optional<MemberEntity> byTextAuthenticationNumber = memberRepository.findByTextAuthenticationNumber(
                 authenticationNumber);
         if (byTextAuthenticationNumber.isPresent()) {
             MemberEntity existingMember = byTextAuthenticationNumber.get();
-            memberDto.toEntity(existingMember);
-            return memberRepository.save(existingMember);
+            MemberEntity memberEntity = memberDto.toEntity(existingMember);
+            return memberRepository.save(memberEntity);
         } else {
             throw new RuntimeException("인증번호가 잘못되었습니다.");
         }
     }
-
-//    public MemberEntity singUp(MemberDto memberDto, HashMap<String, Object> userInfo, String authenticationNumber) {
-//        MemberEntity memberEntity = memberDto.toEntity(memberDto, userInfo, authenticationNumber);
-//        return memberRepository.save(memberEntity);
-//    }
 
 }

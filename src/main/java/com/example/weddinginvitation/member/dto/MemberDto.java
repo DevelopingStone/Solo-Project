@@ -47,31 +47,26 @@ public class MemberDto {
 
 
     public MemberEntity toEntity(HashMap<String, Object> userInfo) {
-
         return MemberEntity.builder().
                 email((String) userInfo.get("email")).
                 nickName((String) userInfo.get("nickname")).
                 textAuthentication(false).
                 role(Role.MEMBER).
                 build();
-
     }
 
     public MemberEntity toEntity(MemberEntity existingMember, String authenticationNumber) {
-
+        System.out.println("existingMember = " + existingMember.toString());
         existingMember.setTextAuthenticationNumber(authenticationNumber);
         existingMember.setPhoneNumber(this.phoneNumber);
         existingMember.setName(this.name);
         return existingMember;
-
     }
 
 
     public MemberEntity toEntity(MemberEntity memberEntity) {
-
         memberEntity.setTextAuthentication(true);
         return memberEntity;
-
     }
 
 }
