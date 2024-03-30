@@ -13,12 +13,15 @@ import javax.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Component
+@ToString
 public class MemberDto {
-
 
     @Email
     private String email;
@@ -30,29 +33,45 @@ public class MemberDto {
     private String name;
 
     @Nullable
-    private String nick_name;
+    private String nickName;
 
     @NotBlank
     @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
-    private String phone_number;
+    private String phoneNumber;
 
     @NotNull
-    private boolean text_authentication;
+    private boolean textAuthentication;
 
     @NotBlank
-    private String text_authentication_number;
+    private String textAuthenticationNumber;
 
 
-    public MemberEntity toEntity(MemberDto memberDto, HashMap<String, Object> userInfo) {
+    public MemberEntity toEntity(HashMap<String, Object> userInfo) {
+
         return MemberEntity.builder().
                 email((String) userInfo.get("email")).
-                role(memberDto.getRole()).
-                name(memberDto.getName()).
-                nick_name((String) userInfo.get("nickname")).
-                phone_number(memberDto.getPhone_number()).
-                text_authentication(memberDto.text_authentication).
-                text_authentication_number(memberDto.getText_authentication_number()).
+                nickName((String) userInfo.get("nickname")).
+                textAuthentication(false).
+                role(Role.MEMBER).
                 build();
+
+    }
+
+    public MemberEntity toEntity(MemberEntity existingMember, String authenticationNumber) {
+
+        existingMember.setTextAuthenticationNumber(authenticationNumber);
+        existingMember.setPhoneNumber(this.phoneNumber);
+        existingMember.setName(this.name);
+        return existingMember;
+
+    }
+
+
+    public MemberEntity toEntity(MemberEntity memberEntity) {
+
+        memberEntity.setTextAuthentication(true);
+        return memberEntity;
+
     }
 
 }

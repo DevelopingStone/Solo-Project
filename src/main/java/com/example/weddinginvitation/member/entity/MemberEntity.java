@@ -9,23 +9,23 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
+@Setter
 public class MemberEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long member_id;
+    private Long memberId;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -34,22 +34,19 @@ public class MemberEntity {
     @Column(unique = true)
     private String email;
 
-    @Nullable
     private String name;
 
     @Nullable
     @Column(unique = true)
-    private String nick_name;
+    private String nickName;
 
     @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
     @Column(unique = true)
-    @NotBlank
-    private String phone_number;
 
-    @NotBlank
-    private String text_authentication_number;
+    private String phoneNumber;
 
-    @NotNull
-    private boolean text_authentication;
+    private boolean textAuthentication;
+
+    private String textAuthenticationNumber;
 
 }

@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class SendSMSController {
+public class SendSmsController {
 
     private final DefaultMessageService messageService;
     private final SendSmsService sendSmsService;
 
     @Autowired
-    public SendSMSController(SendSmsService sendSmsService) {
+    public SendSmsController(SendSmsService sendSmsService) {
         this.sendSmsService = sendSmsService;
         this.messageService = NurigoApp.INSTANCE.initialize("NCSO8SAGQJZTJ7OP", "CAJJUMRR4VHB3ONPDYC7EY5FJ0KSUC8N",
                 "https://api.coolsms.co.kr");
