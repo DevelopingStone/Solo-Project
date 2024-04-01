@@ -1,6 +1,5 @@
 package com.example.weddinginvitation.member.service;
 
-import com.example.weddinginvitation.member.controller.MemberController;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -12,14 +11,12 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class OauthService {
-
-    private static final Logger logger = LoggerFactory.getLogger(OauthService.class);
 
     public String getAccessToken(String authorize_code) {
         String reqURL = "https://kauth.kakao.com/oauth/token";
@@ -29,10 +26,10 @@ public class OauthService {
         try {
             URL url = new URL(reqURL);
 
-            logger.info("POST 요청을 위해 기본값이 false인 setDoOutput을 true로 변환");
+            log.info("POST 요청을 위해 기본값이 false인 setDoOutput을 true로 변환");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
-            logger.info("POST 요청에 필요로 요구하는 파라미터 스트림을 통해 전송");
+            log.info("POST 요청에 필요로 요구하는 파라미터 스트림을 통해 전송");
             conn.setRequestMethod("POST");
             conn.setDoOutput(true);
 
@@ -48,7 +45,7 @@ public class OauthService {
 
             int responseCode = conn.getResponseCode();
 
-            logger.info("// 요청을 통해 얻은 JSON타입의 Response 메세지 읽어오기");
+            log.info("// 요청을 통해 얻은 JSON타입의 Response 메세지 읽어오기");
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String line = "";
             String result = "";
@@ -57,7 +54,7 @@ public class OauthService {
                 result += line;
             }
 
-            logger.info("Gson 라이브러리에 포함된 클래스로 JSON파싱 객체 생성");
+            log.info("Gson 라이브러리에 포함된 클래스로 JSON파싱 객체 생성");
             JsonParser parser = new JsonParser();
             JsonElement element = parser.parse(result);
 
@@ -73,7 +70,7 @@ public class OauthService {
     }
 
     public HashMap<String, Object> getUserInfo(String access_Token) {
-        logger.info("요청하는 클라이언트마다 가진 정보가 다를 수 있기에 HashMap타입으로 선언");
+        log.info("요청하는 클라이언트마다 가진 정보가 다를 수 있기에 HashMap타입으로 선언");
         HashMap<String, Object> userInfo = new HashMap<String, Object>();
         String reqURL = "https://kapi.kakao.com/v2/user/me";
         try {
@@ -81,7 +78,7 @@ public class OauthService {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
 
-            logger.info("요청에 필요한 Header에 포함될 내용");
+            log.info("요청에 필요한 Header에 포함될 내용");
             conn.setRequestProperty("Authorization", "Bearer " + access_Token);
 
             int responseCode = conn.getResponseCode();
