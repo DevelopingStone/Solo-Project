@@ -21,8 +21,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
     implementation 'net.nurigo:sdk:4.3.0'
+    implementation 'com.google.code.gson:gson:2.9.1' // 현재 최신 버전 확인 후 사용
+    implementation 'javax.validation:validation-api:2.0.1.Final' // @Email
+
+
 
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
@@ -32,7 +37,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
 
     runtimeOnly 'mysql:mysql-connector-java:8.0.33'
-    //    runtimeOnly 'mysql:mysql-connector-java'
+
 }
 
 tasks.named('bootBuildImage') {
