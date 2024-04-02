@@ -35,7 +35,7 @@ public class MemberService {
 
         if (byEmail.isPresent()) {
             MemberEntity existingMember = byEmail.get();
-            MemberEntity updatedMember = memberDto.toEntity(existingMember, authenticationNumber);
+            MemberEntity updatedMember = memberDto.update(existingMember, authenticationNumber);
             return memberRepository.save(updatedMember);
         } else {
             throw new RuntimeException(memberDto.getEmail() + " : 메일은 카카오 회원가입이 되지 않았습니다.");
@@ -52,7 +52,7 @@ public class MemberService {
                 authenticationNumber);
         if (byTextAuthenticationNumber.isPresent()) {
             MemberEntity existingMember = byTextAuthenticationNumber.get();
-            MemberEntity memberEntity = memberDto.toEntity(existingMember);
+            MemberEntity memberEntity = memberDto.update(existingMember);
             return memberRepository.save(memberEntity);
         } else {
             throw new RuntimeException("인증번호가 잘못되었습니다.");

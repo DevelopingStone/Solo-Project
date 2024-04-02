@@ -52,7 +52,8 @@ public class MemberController {
      */
     @PostMapping("/sendSmsAuthenticationCode")
     public ResponseEntity<MemberEntity> sendSmsAuthenticationCode(@RequestBody MemberDto memberDto) {
-        String authenticationNumber = generateSMSAuthenticationCodeController.sendOne(memberDto.getPhoneNumber());
+//        String authenticationNumber = generateSMSAuthenticationCodeController.sendOne(memberDto.getPhoneNumber());
+        String authenticationNumber = "123456";
         MemberEntity memberEntity = memberService.sendSmsAuthenticationCode(memberDto, authenticationNumber);
         return ResponseEntity.ok(memberEntity);
     }

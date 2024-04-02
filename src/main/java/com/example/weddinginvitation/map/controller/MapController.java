@@ -28,7 +28,7 @@ public class MapController {
 
         } catch (Exception e) {
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error loading file");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("해당 경로에 kakao_map.html 파일이 없습니다.");
         }
     }
 }

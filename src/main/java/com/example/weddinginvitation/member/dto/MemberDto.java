@@ -55,8 +55,7 @@ public class MemberDto {
                 build();
     }
 
-    public MemberEntity toEntity(MemberEntity existingMember, String authenticationNumber) {
-        System.out.println("existingMember = " + existingMember.toString());
+    public MemberEntity update(MemberEntity existingMember, String authenticationNumber) {
         existingMember.setTextAuthenticationNumber(authenticationNumber);
         existingMember.setPhoneNumber(this.phoneNumber);
         existingMember.setName(this.name);
@@ -64,7 +63,7 @@ public class MemberDto {
     }
 
 
-    public MemberEntity toEntity(MemberEntity memberEntity) {
+    public MemberEntity update(MemberEntity memberEntity) {
         memberEntity.setTextAuthentication(true);
         return memberEntity;
     }
