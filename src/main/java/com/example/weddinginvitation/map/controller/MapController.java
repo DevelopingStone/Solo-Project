@@ -19,7 +19,7 @@ public class MapController {
     @GetMapping("/location")
     public ResponseEntity<String> loadFile() {
         try {
-            Resource resource = resourceLoader.getResource("classpath:kakao_map.html");
+            Resource resource = resourceLoader.getResource("classpath:map/kakao_map.html");
 
             // 파일을 문자열로 읽어오기
             String fileContent = new String(resource.getInputStream().readAllBytes());
