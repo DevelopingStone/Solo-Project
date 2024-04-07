@@ -74,6 +74,7 @@ class ChatThread extends Thread {
             ex.printStackTrace();
         } finally {
             try {
+                socket.close(); // 클라이언트가 접속을 종료하면 해당 소켓을 닫음
                 outList.remove(out);
             } catch (Exception ex) {
                 ex.printStackTrace();
