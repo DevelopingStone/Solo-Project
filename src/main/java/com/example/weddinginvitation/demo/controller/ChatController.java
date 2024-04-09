@@ -10,6 +10,6 @@ public class ChatController {
 
     @GetMapping("/chat")
     public String chatGET() {
-        return "chater";
+        return "chat/chater";
     }
 }
