@@ -45,7 +45,6 @@ public class MemberDto {
     @NotBlank
     private String textAuthenticationNumber;
 
-
     public MemberEntity toEntity(HashMap<String, Object> userInfo) {
         return MemberEntity.builder().
                 email((String) userInfo.get("email")).
@@ -53,19 +52,6 @@ public class MemberDto {
                 textAuthentication(false).
                 role(Role.MEMBER).
                 build();
-    }
-
-    public MemberEntity update(MemberEntity existingMember, String authenticationNumber) {
-        existingMember.setTextAuthenticationNumber(authenticationNumber);
-        existingMember.setPhoneNumber(this.phoneNumber);
-        existingMember.setName(this.name);
-        return existingMember;
-    }
-
-
-    public MemberEntity update(MemberEntity memberEntity) {
-        memberEntity.setTextAuthentication(true);
-        return memberEntity;
     }
 
 }

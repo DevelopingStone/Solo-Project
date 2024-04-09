@@ -50,4 +50,12 @@ public class MemberEntity {
 
     private String textAuthenticationNumber;
 
+    public void updateTextAuthenticationNumber(String authenticationNumber) {
+        this.textAuthenticationNumber = authenticationNumber;
+    }
+
+    public void updateTextAuthentication() {
+        this.textAuthentication = true;
+    }
+
 }
