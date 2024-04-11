@@ -13,6 +13,7 @@ import jakarta.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,7 +22,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @Builder
 @Entity
-@Setter
 @ToString
 public class MemberEntity {
 
@@ -36,6 +36,8 @@ public class MemberEntity {
     @Column(unique = true)
     private String email;
 
+    @Setter
+    @Getter
     private String name;
 
     @Nullable
@@ -44,18 +46,13 @@ public class MemberEntity {
 
     @Pattern(regexp = "01(?:0|1|[6-9])[.-]?(\\d{3}|\\d{4})[.-]?(\\d{4})$")
     @Column(unique = true)
+    @Setter
     private String phoneNumber;
 
+    @Setter
     private boolean textAuthentication;
 
+    @Setter
     private String textAuthenticationNumber;
-
-    public void updateTextAuthenticationNumber(String authenticationNumber) {
-        this.textAuthenticationNumber = authenticationNumber;
-    }
-
-    public void updateTextAuthentication() {
-        this.textAuthentication = true;
-    }
 
 }
