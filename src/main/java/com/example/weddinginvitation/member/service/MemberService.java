@@ -34,11 +34,10 @@ public class MemberService {
         }
         if (user.getName() == null) {
             log.info("핸드폰번호 인증이 필요합니다.");
-            return user;
         } else {
             log.info("이미 회원가입이 되어있습니다.");
-            return user;
         }
+        return user;
     }
 
     /**
