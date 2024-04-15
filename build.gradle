@@ -21,13 +21,15 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
-
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
     implementation 'net.nurigo:sdk:4.3.0'
     implementation 'com.google.code.gson:gson:2.9.1' // 현재 최신 버전 확인 후 사용
+
+    implementation 'org.springframework.boot:spring-boot-starter-security' // 스프링시큐리티
+    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1' // JWT
+
     implementation 'javax.validation:validation-api:2.0.1.Final' // @Email
-
-
 
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
