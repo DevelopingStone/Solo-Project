@@ -25,7 +25,6 @@ public class MemberService {
 
         Optional<MemberEntity> userEmail = memberRepository.findByEmail((String) userInfo.get("email"));
         MemberEntity user = userEmail.orElse(null);
-//        userEmail.orElseThrow(NotFoundException::new);
 
         if (user == null) {
             log.info("회원정보가 없으므로 회원가입 진행하겠습니다.");
@@ -39,6 +38,27 @@ public class MemberService {
         }
         return user;
     }
+/*    public MemberEntity kakaoLogin(String userInfoJson) {
+        MemberDto memberDto = MemberDto.fromJson(userInfoJson);
+
+        Optional<MemberEntity> userEmail = memberRepository.findByEmail(memberDto.getEmail());
+        MemberEntity user = userEmail.orElse(null);
+
+        if (user == null) {
+            log.info("회원정보가 없으므로 회원가입 진행하겠습니다.");
+            MemberEntity kakaoLoginData = memberDto.toEntity();
+            return memberRepository.save(kakaoLoginData);
+        }
+
+        if (user.getName() == null) {
+            log.info("핸드폰번호 인증이 필요합니다.");
+        } else {
+            log.info("이미 회원가입이 되어있습니다.");
+        }
+
+        return user;
+    }*/
+
 
     /**
      * @param memberDto            소셜로그인에서 가져오지 못하는 정보 추가기입
