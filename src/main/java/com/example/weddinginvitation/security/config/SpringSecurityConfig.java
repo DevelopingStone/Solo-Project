@@ -26,8 +26,8 @@ public class SpringSecurityConfig {
         http.csrf().disable()
                 .authorizeHttpRequests(request -> request
                                 .requestMatchers("/member/*").permitAll()
-                                .anyRequest().authenticated()
-//                                .anyRequest().permitAll()
+//                                .anyRequest().authenticated()
+                                .anyRequest().permitAll()
                 )
                 .formLogin(login -> login
 //                                .loginPage("/member/kakaoLogin")
