@@ -6,7 +6,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class generateSmsAuthenticationCodeService {
-
+    
+    /**
+     * @param phoneNumber 문자인증 번호 생성
+     * @return 문자인증 번호 반환
+     */
     public Message generateSmsAuthenticationCode(String phoneNumber) {
 
         Random rand = new Random();
