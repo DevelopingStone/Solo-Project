@@ -71,9 +71,6 @@ public class MemberService {
         Optional<MemberEntity> byEmail = memberRepository.findByEmail(memberDto.getEmail());
         boolean matches = passwordEncoder.matches(memberDto.getTextAuthenticationNumber(),
                 byEmail.get().getTextAuthenticationNumber());
-
-//        Optional<MemberEntity> byTextAuthenticationNumber = memberRepository.findByTextAuthenticationNumber(
-//                matches);
         if (matches) {
             byEmail.get().setTextAuthentication(true);
             return memberRepository.save(byEmail.get());
