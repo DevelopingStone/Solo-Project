@@ -1,4 +1,4 @@
-package com.example.weddinginvitation.demo.handler;
+package com.example.weddinginvitation.chat.handler;
 
 import java.util.ArrayList;
 import java.util.List;
