@@ -1,6 +1,6 @@
-package com.example.weddinginvitation.demo.config;
+package com.example.weddinginvitation.chat.config;
 
-import com.example.weddinginvitation.demo.handler.ChatHandler;
+import com.example.weddinginvitation.chat.handler.ChatHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;

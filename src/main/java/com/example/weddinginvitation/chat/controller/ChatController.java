@@ -1,4 +1,4 @@
-package com.example.weddinginvitation.demo.controller;
+package com.example.weddinginvitation.chat.controller;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;

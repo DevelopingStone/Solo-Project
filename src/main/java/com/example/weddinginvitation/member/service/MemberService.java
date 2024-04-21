@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 public class MemberService {
 
     private final MemberRepository memberRepository;
+    private final PasswordEncoder passwordEncoder;
     private final MemberDto memberDto;
 
     /**
@@ -25,7 +27,6 @@ public class MemberService {
 
         Optional<MemberEntity> userEmail = memberRepository.findByEmail((String) userInfo.get("email"));
         MemberEntity user = userEmail.orElse(null);
-//        userEmail.orElseThrow(NotFoundException::new);
 
         if (user == null) {
             log.info("회원정보가 없으므로 회원가입 진행하겠습니다.");
@@ -51,7 +52,8 @@ public class MemberService {
 
         if (byEmail.isPresent()) {
             MemberEntity existingMember = byEmail.get();
-            existingMember.setTextAuthenticationNumber(authenticationNumber);
+            String encryptionPW = passwordEncoder.encode(authenticationNumber);
+            existingMember.setTextAuthenticationNumber(encryptionPW);
             existingMember.setPhoneNumber(memberDto.getPhoneNumber());
             existingMember.setName(memberDto.getName());
             return memberRepository.save(existingMember);
@@ -62,16 +64,16 @@ public class MemberService {
     }
 
     /**
-     * @param authenticationNumber 문자인증 확인
+     * @param memberDto 문자인증 확인
      * @return 회원가입 완료
      */
-    public MemberEntity sendSmsAuthenticationCodeCheck(String authenticationNumber) {
-        Optional<MemberEntity> byTextAuthenticationNumber = memberRepository.findByTextAuthenticationNumber(
-                authenticationNumber);
-        if (byTextAuthenticationNumber.isPresent()) {
-            MemberEntity existingMember = byTextAuthenticationNumber.get();
-            existingMember.setTextAuthentication(true);
-            return memberRepository.save(existingMember);
+    public MemberEntity sendSmsAuthenticationCodeCheck(MemberDto memberDto) {
+        Optional<MemberEntity> byEmail = memberRepository.findByEmail(memberDto.getEmail());
+        boolean matches = passwordEncoder.matches(memberDto.getTextAuthenticationNumber(),
+                byEmail.get().getTextAuthenticationNumber());
+        if (matches) {
+            byEmail.get().setTextAuthentication(true);
+            return memberRepository.save(byEmail.get());
 
         } else {
             throw new RuntimeException("인증번호가 잘못되었습니다.");

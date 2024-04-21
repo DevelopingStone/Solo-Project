@@ -30,9 +30,11 @@ public class MemberEntity {
     private Long memberId;
 
     @Enumerated(EnumType.STRING)
+    @Getter
     private Role role;
 
     @Email
+    @Getter
     @Column(unique = true)
     private String email;
 
@@ -53,6 +55,7 @@ public class MemberEntity {
     private boolean textAuthentication;
 
     @Setter
+    @Getter
     private String textAuthenticationNumber;
 
 }

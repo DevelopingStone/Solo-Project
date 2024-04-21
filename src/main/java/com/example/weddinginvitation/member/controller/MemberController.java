@@ -64,8 +64,7 @@ public class MemberController {
      */
     @PostMapping("/sendSmsAuthenticationCodeCheck")
     public ResponseEntity<MemberEntity> sendSmsAuthenticationCodeCheck(@RequestBody MemberDto memberDto) {
-        MemberEntity memberEntity = memberService.sendSmsAuthenticationCodeCheck(
-                memberDto.getTextAuthenticationNumber());
+        MemberEntity memberEntity = memberService.sendSmsAuthenticationCodeCheck(memberDto);
         return ResponseEntity.ok(memberEntity);
     }
 

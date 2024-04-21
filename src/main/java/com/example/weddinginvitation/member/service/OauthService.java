@@ -18,6 +18,10 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class OauthService {
 
+    /**
+     * @param authorize_code 카카오 인증코드, 토큰정보 확인
+     * @return 회원정보 반환
+     */
     public String getAccessToken(String authorize_code) {
         String reqURL = "https://kauth.kakao.com/oauth/token";
         String access_Token = "";
