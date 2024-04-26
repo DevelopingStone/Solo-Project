@@ -75,7 +75,7 @@ public class OauthService {
 
     public HashMap<String, Object> getUserInfo(String access_Token) {
         log.info("요청하는 클라이언트마다 가진 정보가 다를 수 있기에 HashMap타입으로 선언");
-        HashMap<String, Object> userInfo = new HashMap<String, Object>();
+        HashMap<String, Object> userInfo = new HashMap<>();
         String reqURL = "https://kapi.kakao.com/v2/user/me";
         try {
             URL url = new URL(reqURL);
@@ -97,7 +97,7 @@ public class OauthService {
 
             JsonParser parser = new JsonParser();
             JsonElement element = parser.parse(result);
-
+            log.info("Profile Image : {}", element);
             JsonObject properties = element.getAsJsonObject().get("properties").getAsJsonObject();
             JsonObject kakao_account = element.getAsJsonObject().get("kakao_account").getAsJsonObject();
 
