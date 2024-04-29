@@ -30,6 +30,7 @@ public class MapController {
         } catch (Exception e) {
             log.error("해당 경로에 파일이 없습니다. : {}", e.getMessage());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("해당 경로에 kakao_map.html 파일이 없습니다.");
+
         }
     }
 }
