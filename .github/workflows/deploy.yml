@@ -50,7 +50,7 @@ jobs:
             sudo su
             sudo rm -rf /root/instagram-server/current
             sudo mkdir /root/instagram-server/current
-            sudo mv /root/instagram-server/tobe/prroject.jar /root/instagram-server/current/project.jar
+            sudo mv /root/instagram-server/tobe/project.jar /root/instagram-server/current/project.jar
             cd /root/instagram-server/current
             sudo fuser -k -n tcp 8080 || true
             sudo nohup java -jar /root/instagram-server/current/project.jar > ./output.log 2>&1 &
