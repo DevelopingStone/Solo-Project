@@ -9,15 +9,20 @@ jobs:
     steps:
       - name: SSH(원격 접속)으로 EC2 빌드하기
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          APPLICATION_PROPERTIES: ${{ secrets.APPLICATION_PROPERTIES }}
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATE_KEY }}
+          envs: APPLICATION_PROPERTIES
           script_stop: true
           script: |
             sudo su
             cd /home/ubuntu/instagram-server
+            sudo rm -rf /home/ubuntu/instagram-server/src/main/application.yml
             sudo git pull origin master
+            sudo echo "$APPLICATION_PROPERTIES" > /home/ubuntu/instagram-server/src/main/resources/application.yml
             sudo ./gradlew clean build
             sudo fuser -k -n tcp 8080 || true
             sudo nohup java -jar /home/ubuntu/instagram-server/build/libs/*SNAPSHOT.jar > ./output.log 2>&1 &
