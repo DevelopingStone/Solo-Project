@@ -11,7 +11,7 @@ public class AppController {
 
   @GetMapping
   public String hello() {
-    return "application.yml 수정ㅎ";
+    return "application.yml 최종수정";
   }
 
 }
