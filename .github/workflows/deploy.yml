@@ -1,0 +1,28 @@
+name: Deploy To EC2
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            sudo su
+            cd /home/ubuntu/instagram-server
+            git pull origin master
+            ./gradlew clean build
+            sudo fuser -k -n tcp 8080 || true
+            cd /home/ubuntu/instagram-server/build/libs
+#            nohup java -jar /home/ubuntu/instagram-server/build/libs/*SNAPSHOT.jar > ./output.log 2>&1 &
+            nohup java -jar /home/ubuntu/instagram-server/build/libs/*SNAPSHOT.jar > ./output.log
