@@ -6,17 +6,16 @@ on:
 
 
 jobs:
-  build:
-    name: Build
+  Deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: executing remote ssh commands using password
+      - name: SSH(원격 접속)으로 EC2 빌드하기
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          script_stop: true
           script: |
             sudo su
             cd /home/ubuntu/instagram-server
