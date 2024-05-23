@@ -17,7 +17,7 @@ jobs:
           script_stop: true
           script: |
             sudo su
-            sudo cd /home/ubuntu/instagram-server
+            cd /home/ubuntu/instagram-server
             sudo git pull origin master
             sudo ./gradlew clean build
             sudo fuser -k -n tcp 8080 || true
