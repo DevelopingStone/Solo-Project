@@ -11,7 +11,7 @@ public class AppController {
 
   @GetMapping
   public String hello() {
-    return "Hello, every one";
+    return "이거 뜨냐?";
   }
 
 }
