@@ -8,7 +8,6 @@ class InstagramServerApplicationTests {
 
 	@Test
 	void contextLoads() {
-		throw new RuntimeException("Fail");
 	}
 
 }
