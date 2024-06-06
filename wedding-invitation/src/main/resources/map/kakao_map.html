@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Kakao 지도 시작하기</title>
+</head>
+<body>
+<h1 style="text-align: center;">결혼식장 위치</h1>
+<div id="map" style="width:800px;height:600px;margin: 0 auto;"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e70c5f1dc9d5c457e264c6c63fc5fd4"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(35.8368657, 128.5332584),
+        level: 3
+    };
+
+    var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다
+    var markerPosition = new kakao.maps.LatLng(35.8368657, 128.5332584);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+
+
+
+</script>
+</body>
+</html>
